@@ -1,0 +1,190 @@
+2026-07-13 21:35:50,443 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-13 21:35:51,150 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-13 21:35:51,164 | WARNING | src.etl.loader | profitandloss: 103 rows rejected during year normalization
+2026-07-13 21:35:51,983 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-13 21:35:52,017 | WARNING | src.etl.loader | balancesheet: 5 rows rejected during year normalization
+2026-07-13 21:35:52,393 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-13 21:35:52,451 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-13 21:35:52,716 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-13 21:35:52,759 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-13 21:35:52,818 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-13 21:35:53,884 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-13 21:35:54,283 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-13 21:35:54,481 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-13 21:35:54,533 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-13 21:37:14,834 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-13 21:37:15,344 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-13 21:37:15,355 | WARNING | src.etl.loader | profitandloss: 103 rows rejected during year normalization
+2026-07-13 21:37:15,651 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-13 21:37:15,660 | WARNING | src.etl.loader | balancesheet: 5 rows rejected during year normalization
+2026-07-13 21:37:15,936 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-13 21:37:15,962 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-13 21:37:16,185 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-13 21:37:16,210 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-13 21:37:16,247 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-13 21:37:17,565 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-13 21:37:17,869 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-13 21:37:18,057 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-13 21:37:18,089 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-13 21:49:14,597 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-13 21:49:15,101 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-13 21:49:15,119 | WARNING | src.etl.loader | profitandloss: 103 rows rejected during year normalization
+2026-07-13 21:49:15,609 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-13 21:49:15,622 | WARNING | src.etl.loader | balancesheet: 5 rows rejected during year normalization
+2026-07-13 21:49:15,850 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-13 21:49:15,877 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-13 21:49:16,045 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-13 21:49:16,068 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-13 21:49:16,102 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-13 21:49:17,335 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-13 21:49:17,961 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-13 21:49:18,155 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-13 21:49:18,200 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-13 21:52:41,151 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-13 21:52:41,567 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-13 21:52:41,584 | WARNING | src.etl.loader | profitandloss: 103 rows rejected during year normalization
+2026-07-13 21:52:41,990 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-13 21:52:42,008 | WARNING | src.etl.loader | balancesheet: 5 rows rejected during year normalization
+2026-07-13 21:52:42,313 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-13 21:52:42,353 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-13 21:52:42,780 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-13 21:52:42,844 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-13 21:52:42,939 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-13 21:52:44,810 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-13 21:52:45,630 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-13 21:52:45,891 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-13 21:52:45,934 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-13 21:58:43,080 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-13 21:58:44,039 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-13 21:58:44,059 | WARNING | src.etl.loader | profitandloss: 103 rows rejected during year normalization
+2026-07-13 21:58:44,989 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-13 21:58:45,003 | WARNING | src.etl.loader | balancesheet: 5 rows rejected during year normalization
+2026-07-13 21:58:45,568 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-13 21:58:45,656 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-13 21:58:46,361 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-13 21:58:46,436 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-13 21:58:46,559 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-13 21:58:48,729 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-13 21:58:49,265 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-13 21:58:49,440 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-13 21:58:49,462 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-13 22:20:54,748 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-13 22:20:55,422 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-13 22:20:55,438 | WARNING | src.etl.loader | profitandloss: 103 rows rejected during year normalization
+2026-07-13 22:20:56,080 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-13 22:20:56,093 | WARNING | src.etl.loader | balancesheet: 5 rows rejected during year normalization
+2026-07-13 22:20:56,441 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-13 22:20:56,485 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-13 22:20:56,874 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-13 22:20:56,912 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-13 22:20:56,961 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-13 22:20:59,478 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-13 22:21:00,715 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-13 22:21:00,876 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-13 22:21:00,904 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-14 06:55:10,772 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-14 06:55:11,364 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-14 06:55:11,381 | WARNING | src.etl.loader | profitandloss: 103 rows rejected during year normalization
+2026-07-14 06:55:12,106 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-14 06:55:12,128 | WARNING | src.etl.loader | balancesheet: 5 rows rejected during year normalization
+2026-07-14 06:55:12,546 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-14 06:55:12,602 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-14 06:55:13,189 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-14 06:55:13,250 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-14 06:55:13,332 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-14 06:55:15,686 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-14 06:55:16,244 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-14 06:55:16,496 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-14 06:55:16,555 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-14 07:18:15,250 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-14 07:18:15,579 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-14 07:18:15,587 | WARNING | src.etl.loader | profitandloss: 103 rows rejected during year normalization
+2026-07-14 07:18:15,917 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-14 07:18:15,927 | WARNING | src.etl.loader | balancesheet: 5 rows rejected during year normalization
+2026-07-14 07:18:16,183 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-14 07:18:16,228 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-14 07:18:16,445 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-14 07:18:16,491 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-14 07:18:16,551 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-14 07:18:17,472 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-14 07:18:17,908 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-14 07:18:18,089 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-14 07:18:18,137 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-14 07:20:50,047 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-14 07:20:50,567 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-14 07:20:50,590 | WARNING | src.etl.loader | profitandloss: 103 rows rejected during year normalization
+2026-07-14 07:20:50,599 | WARNING | src.etl.loader | profitandloss: dropped 91 rows with company_id not in companies (1082 remain)
+2026-07-14 07:20:50,607 | WARNING | src.etl.loader | profitandloss: dropped 12 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-14 07:20:51,089 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-14 07:20:51,101 | WARNING | src.etl.loader | balancesheet: 5 rows rejected during year normalization
+2026-07-14 07:20:51,106 | WARNING | src.etl.loader | balancesheet: dropped 80 rows with company_id not in companies (1227 remain)
+2026-07-14 07:20:51,110 | WARNING | src.etl.loader | balancesheet: dropped 169 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-14 07:20:51,359 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-14 07:20:51,374 | WARNING | src.etl.loader | cashflow: dropped 96 rows with company_id not in companies (1091 remain)
+2026-07-14 07:20:51,377 | WARNING | src.etl.loader | cashflow: dropped 35 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-14 07:20:51,400 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-14 07:20:51,404 | WARNING | src.etl.loader | analysis: dropped 4 rows with company_id not in companies (16 remain)
+2026-07-14 07:20:51,661 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-14 07:20:51,675 | WARNING | src.etl.loader | documents: dropped 128 rows with company_id not in companies (1457 remain)
+2026-07-14 07:20:51,696 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-14 07:20:51,702 | WARNING | src.etl.loader | prosandcons: dropped 2 rows with company_id not in companies (14 remain)
+2026-07-14 07:20:51,740 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-14 07:20:52,937 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-14 07:20:53,330 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-14 07:20:53,345 | WARNING | src.etl.loader | financial_ratios: dropped 24 rows with company_id not in companies (1160 remain)
+2026-07-14 07:20:53,349 | WARNING | src.etl.loader | financial_ratios: dropped 119 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-14 07:20:53,507 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-14 07:20:53,537 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-14 07:20:53,549 | INFO | src.etl.loader | Merged market_cap into financial_ratios: 1041 rows
+2026-07-14 07:20:54,369 | INFO | __main__ | Removed existing db\nifty100.db for a clean load
+2026-07-14 07:20:54,515 | INFO | __main__ | Schema applied from db\schema.sql
+2026-07-14 07:20:54,532 | INFO | __main__ | Wrote companies: 92 rows
+2026-07-14 07:20:54,562 | INFO | __main__ | Wrote profitandloss: 1070 rows
+2026-07-14 07:20:54,585 | INFO | __main__ | Wrote balancesheet: 1058 rows
+2026-07-14 07:20:54,600 | INFO | __main__ | Wrote cashflow: 1056 rows
+2026-07-14 07:20:54,609 | INFO | __main__ | Wrote analysis: 16 rows
+2026-07-14 07:20:54,624 | INFO | __main__ | Wrote documents: 1457 rows
+2026-07-14 07:20:54,632 | INFO | __main__ | Wrote prosandcons: 14 rows
+2026-07-14 07:20:54,641 | INFO | __main__ | Wrote sectors: 92 rows
+2026-07-14 07:20:54,698 | INFO | __main__ | Wrote stock_prices: 5520 rows
+2026-07-14 07:20:54,723 | INFO | __main__ | Wrote financial_ratios: 1041 rows
+2026-07-14 07:20:54,732 | INFO | __main__ | Wrote peer_groups: 56 rows
+2026-07-14 21:31:54,889 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-14 21:31:55,104 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-14 21:31:55,109 | WARNING | src.etl.loader | profitandloss: 103 rows rejected during year normalization
+2026-07-14 21:31:55,117 | WARNING | src.etl.loader | profitandloss: dropped 91 rows with company_id not in companies (1082 remain)
+2026-07-14 21:31:55,123 | WARNING | src.etl.loader | profitandloss: dropped 12 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-14 21:31:55,335 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-14 21:31:55,341 | WARNING | src.etl.loader | balancesheet: 5 rows rejected during year normalization
+2026-07-14 21:31:55,343 | WARNING | src.etl.loader | balancesheet: dropped 80 rows with company_id not in companies (1227 remain)
+2026-07-14 21:31:55,344 | WARNING | src.etl.loader | balancesheet: dropped 169 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-14 21:31:55,460 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-14 21:31:55,466 | WARNING | src.etl.loader | cashflow: dropped 96 rows with company_id not in companies (1091 remain)
+2026-07-14 21:31:55,468 | WARNING | src.etl.loader | cashflow: dropped 35 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-14 21:31:55,487 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-14 21:31:55,490 | WARNING | src.etl.loader | analysis: dropped 4 rows with company_id not in companies (16 remain)
+2026-07-14 21:31:55,598 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-14 21:31:55,604 | WARNING | src.etl.loader | documents: dropped 128 rows with company_id not in companies (1457 remain)
+2026-07-14 21:31:55,622 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-14 21:31:55,624 | WARNING | src.etl.loader | prosandcons: dropped 2 rows with company_id not in companies (14 remain)
+2026-07-14 21:31:55,649 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-14 21:31:56,157 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-14 21:31:56,349 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-14 21:31:56,355 | WARNING | src.etl.loader | financial_ratios: dropped 24 rows with company_id not in companies (1160 remain)
+2026-07-14 21:31:56,358 | WARNING | src.etl.loader | financial_ratios: dropped 119 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-14 21:31:56,441 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-14 21:31:56,470 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-14 21:31:56,478 | INFO | src.etl.loader | Merged market_cap into financial_ratios: 1041 rows
+2026-07-14 21:31:56,956 | INFO | __main__ | Removed existing db\nifty100.db for a clean load
+2026-07-14 21:31:57,039 | INFO | __main__ | Schema applied from db\schema.sql
+2026-07-14 21:31:57,046 | INFO | __main__ | Wrote companies: 92 rows
+2026-07-14 21:31:57,059 | INFO | __main__ | Wrote profitandloss: 1070 rows
+2026-07-14 21:31:57,072 | INFO | __main__ | Wrote balancesheet: 1058 rows
+2026-07-14 21:31:57,085 | INFO | __main__ | Wrote cashflow: 1056 rows
+2026-07-14 21:31:57,092 | INFO | __main__ | Wrote analysis: 16 rows
+2026-07-14 21:31:57,101 | INFO | __main__ | Wrote documents: 1457 rows
+2026-07-14 21:31:57,108 | INFO | __main__ | Wrote prosandcons: 14 rows
+2026-07-14 21:31:57,115 | INFO | __main__ | Wrote sectors: 92 rows
+2026-07-14 21:31:57,151 | INFO | __main__ | Wrote stock_prices: 5520 rows
+2026-07-14 21:31:57,168 | INFO | __main__ | Wrote financial_ratios: 1041 rows
+2026-07-14 21:31:57,176 | INFO | __main__ | Wrote peer_groups: 56 rows

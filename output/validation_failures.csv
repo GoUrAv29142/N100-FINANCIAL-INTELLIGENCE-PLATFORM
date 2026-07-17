@@ -1,0 +1,685 @@
+rule,severity,table,row_id,detail
+DQ-05,WARNING,profitandloss,96,computed OPM 34.4% vs reported 30.0%
+DQ-05,WARNING,profitandloss,219,computed OPM 30.6% vs reported 1353.0%
+DQ-05,WARNING,profitandloss,220,computed OPM 31.5% vs reported 2307.0%
+DQ-05,WARNING,profitandloss,221,computed OPM 31.4% vs reported 3097.0%
+DQ-05,WARNING,profitandloss,222,computed OPM 32.6% vs reported 3466.0%
+DQ-05,WARNING,profitandloss,223,computed OPM 53.5% vs reported -5715.0%
+DQ-05,WARNING,profitandloss,224,computed OPM 63.1% vs reported -10277.0%
+DQ-05,WARNING,profitandloss,225,computed OPM 49.4% vs reported -5447.0%
+DQ-05,WARNING,profitandloss,226,computed OPM 56.0% vs reported -9859.0%
+DQ-05,WARNING,profitandloss,227,computed OPM 50.1% vs reported -2510.0%
+DQ-05,WARNING,profitandloss,228,computed OPM 44.5% vs reported 3170.0%
+DQ-05,WARNING,profitandloss,229,computed OPM 34.2% vs reported 13857.0%
+DQ-05,WARNING,profitandloss,230,computed OPM 34.7% vs reported 11952.0%
+DQ-05,WARNING,profitandloss,258,computed OPM 32.5% vs reported 1367.0%
+DQ-05,WARNING,profitandloss,259,computed OPM 32.3% vs reported 1986.0%
+DQ-05,WARNING,profitandloss,260,computed OPM 32.6% vs reported 2867.0%
+DQ-05,WARNING,profitandloss,261,computed OPM 32.3% vs reported 3935.0%
+DQ-05,WARNING,profitandloss,262,computed OPM 29.5% vs reported 6310.0%
+DQ-05,WARNING,profitandloss,263,computed OPM 34.7% vs reported 7608.0%
+DQ-05,WARNING,profitandloss,264,computed OPM 40.6% vs reported 6314.0%
+DQ-05,WARNING,profitandloss,265,computed OPM 37.5% vs reported 9906.0%
+DQ-05,WARNING,profitandloss,266,computed OPM 30.7% vs reported 16018.0%
+DQ-05,WARNING,profitandloss,267,computed OPM 29.3% vs reported 19987.0%
+DQ-05,WARNING,profitandloss,269,computed OPM 30.0% vs reported 1006.0%
+DQ-05,WARNING,profitandloss,270,computed OPM 29.8% vs reported 809.0%
+DQ-05,WARNING,profitandloss,271,computed OPM 30.0% vs reported 902.0%
+DQ-05,WARNING,profitandloss,272,computed OPM 55.4% vs reported -11700.0%
+DQ-05,WARNING,profitandloss,273,computed OPM 43.3% vs reported -4372.0%
+DQ-05,WARNING,profitandloss,274,computed OPM 56.7% vs reported -9197.0%
+DQ-05,WARNING,profitandloss,275,computed OPM 48.8% vs reported -5414.0%
+DQ-05,WARNING,profitandloss,276,computed OPM 51.4% vs reported -11728.0%
+DQ-05,WARNING,profitandloss,277,computed OPM 51.2% vs reported -6957.0%
+DQ-05,WARNING,profitandloss,278,computed OPM 51.1% vs reported -2948.0%
+DQ-05,WARNING,profitandloss,279,computed OPM 40.5% vs reported 6329.0%
+DQ-05,WARNING,profitandloss,280,computed OPM 37.5% vs reported 4102.0%
+DQ-05,WARNING,profitandloss,360,computed OPM 21.2% vs reported 655.0%
+DQ-05,WARNING,profitandloss,361,computed OPM 24.4% vs reported -672.0%
+DQ-05,WARNING,profitandloss,362,computed OPM 23.5% vs reported -621.0%
+DQ-05,WARNING,profitandloss,363,computed OPM 40.4% vs reported -8008.0%
+DQ-05,WARNING,profitandloss,364,computed OPM 37.8% vs reported -5775.0%
+DQ-05,WARNING,profitandloss,365,computed OPM 61.9% vs reported -13350.0%
+DQ-05,WARNING,profitandloss,366,computed OPM 56.7% vs reported -11590.0%
+DQ-05,WARNING,profitandloss,367,computed OPM 53.9% vs reported -12867.0%
+DQ-05,WARNING,profitandloss,368,computed OPM 61.8% vs reported -18367.0%
+DQ-05,WARNING,profitandloss,369,computed OPM 58.4% vs reported -13657.0%
+DQ-05,WARNING,profitandloss,370,computed OPM 49.8% vs reported -9877.0%
+DQ-05,WARNING,profitandloss,371,computed OPM 41.8% vs reported -7745.0%
+DQ-05,WARNING,profitandloss,373,computed OPM 26.8% vs reported 472.0%
+DQ-05,WARNING,profitandloss,374,computed OPM 28.4% vs reported 578.0%
+DQ-05,WARNING,profitandloss,375,computed OPM 28.6% vs reported 696.0%
+DQ-05,WARNING,profitandloss,376,computed OPM 30.0% vs reported 899.0%
+DQ-05,WARNING,profitandloss,377,computed OPM 28.2% vs reported 1143.0%
+DQ-05,WARNING,profitandloss,378,computed OPM 26.1% vs reported 1451.0%
+DQ-05,WARNING,profitandloss,379,computed OPM 23.0% vs reported 1888.0%
+DQ-05,WARNING,profitandloss,380,computed OPM 27.8% vs reported 1699.0%
+DQ-05,WARNING,profitandloss,381,computed OPM 30.4% vs reported 2094.0%
+DQ-05,WARNING,profitandloss,382,computed OPM 28.8% vs reported 2924.0%
+DQ-05,WARNING,profitandloss,383,computed OPM 28.1% vs reported 3515.0%
+DQ-05,WARNING,profitandloss,384,computed OPM 28.1% vs reported 4548.0%
+DQ-05,WARNING,profitandloss,386,computed OPM 73.3% vs reported 2214.0%
+DQ-05,WARNING,profitandloss,387,computed OPM 78.9% vs reported 2147.0%
+DQ-05,WARNING,profitandloss,388,computed OPM 80.9% vs reported 2163.0%
+DQ-05,WARNING,profitandloss,389,computed OPM 82.0% vs reported 2480.0%
+DQ-05,WARNING,profitandloss,390,computed OPM 82.7% vs reported 2496.0%
+DQ-05,WARNING,profitandloss,391,computed OPM 81.3% vs reported 2826.0%
+DQ-05,WARNING,profitandloss,392,computed OPM 81.1% vs reported 3097.0%
+DQ-05,WARNING,profitandloss,393,computed OPM 81.3% vs reported 3206.0%
+DQ-05,WARNING,profitandloss,394,computed OPM 77.8% vs reported 4252.0%
+DQ-05,WARNING,profitandloss,395,computed OPM 79.1% vs reported 4553.0%
+DQ-05,WARNING,profitandloss,396,computed OPM 77.9% vs reported 5027.0%
+DQ-05,WARNING,profitandloss,397,computed OPM 75.6% vs reported 6291.0%
+DQ-05,WARNING,profitandloss,399,computed OPM 73.5% vs reported 18087.0%
+DQ-05,WARNING,profitandloss,400,computed OPM 74.8% vs reported 17766.0%
+DQ-05,WARNING,profitandloss,401,computed OPM 76.6% vs reported 17343.0%
+DQ-05,WARNING,profitandloss,402,computed OPM 76.0% vs reported 18714.0%
+DQ-05,WARNING,profitandloss,403,computed OPM 84.1% vs reported 12448.0%
+DQ-05,WARNING,profitandloss,404,computed OPM 89.1% vs reported 9288.0%
+DQ-05,WARNING,profitandloss,405,computed OPM 74.9% vs reported 25007.0%
+DQ-05,WARNING,profitandloss,406,computed OPM 77.5% vs reported 21581.0%
+DQ-05,WARNING,profitandloss,407,computed OPM 79.3% vs reported 18628.0%
+DQ-05,WARNING,profitandloss,408,computed OPM 77.5% vs reported 24721.0%
+DQ-05,WARNING,profitandloss,409,computed OPM 68.0% vs reported 44232.0%
+DQ-05,WARNING,profitandloss,410,computed OPM 66.3% vs reported 47971.0%
+DQ-05,WARNING,profitandloss,568,computed OPM 35.2% vs reported 3534.0%
+DQ-05,WARNING,profitandloss,569,computed OPM 31.7% vs reported 5602.0%
+DQ-05,WARNING,profitandloss,570,computed OPM 31.9% vs reported 7214.0%
+DQ-05,WARNING,profitandloss,571,computed OPM 31.8% vs reported 9037.0%
+DQ-05,WARNING,profitandloss,572,computed OPM 32.6% vs reported 11374.0%
+DQ-05,WARNING,profitandloss,573,computed OPM 34.6% vs reported 13374.0%
+DQ-05,WARNING,profitandloss,574,computed OPM 33.1% vs reported 16592.0%
+DQ-05,WARNING,profitandloss,575,computed OPM 37.2% vs reported 14593.0%
+DQ-05,WARNING,profitandloss,576,computed OPM 40.8% vs reported 16848.0%
+DQ-05,WARNING,profitandloss,577,computed OPM 41.6% vs reported 20795.0%
+DQ-05,WARNING,profitandloss,578,computed OPM 36.9% vs reported 29932.0%
+DQ-05,WARNING,profitandloss,579,computed OPM 61.4% vs reported -44685.0%
+DQ-05,WARNING,profitandloss,581,computed OPM 96.3% vs reported 525.0%
+DQ-05,WARNING,profitandloss,582,computed OPM 96.5% vs reported 605.0%
+DQ-05,WARNING,profitandloss,583,computed OPM 96.8% vs reported 874.0%
+DQ-05,WARNING,profitandloss,584,computed OPM 94.7% vs reported 953.0%
+DQ-05,WARNING,profitandloss,585,computed OPM 96.8% vs reported 972.0%
+DQ-05,WARNING,profitandloss,586,computed OPM 96.7% vs reported 1074.0%
+DQ-05,WARNING,profitandloss,587,computed OPM 96.9% vs reported 1215.0%
+DQ-05,WARNING,profitandloss,588,computed OPM 96.1% vs reported 1141.0%
+DQ-05,WARNING,profitandloss,589,computed OPM 98.3% vs reported 1235.0%
+DQ-05,WARNING,profitandloss,590,computed OPM 98.8% vs reported 778.0%
+DQ-05,WARNING,profitandloss,591,computed OPM 99.9% vs reported 80.0%
+DQ-05,WARNING,profitandloss,592,computed OPM 99.5% vs reported 531.0%
+DQ-05,WARNING,profitandloss,594,computed OPM 85.9% vs reported 3553.0%
+DQ-05,WARNING,profitandloss,595,computed OPM 87.2% vs reported 3520.0%
+DQ-05,WARNING,profitandloss,596,computed OPM 84.5% vs reported 4424.0%
+DQ-05,WARNING,profitandloss,597,computed OPM 84.0% vs reported 4585.0%
+DQ-05,WARNING,profitandloss,598,computed OPM 83.6% vs reported 5334.0%
+DQ-05,WARNING,profitandloss,599,computed OPM 85.2% vs reported 5025.0%
+DQ-05,WARNING,profitandloss,600,computed OPM 86.1% vs reported 4070.0%
+DQ-05,WARNING,profitandloss,601,computed OPM 86.9% vs reported 4058.0%
+DQ-05,WARNING,profitandloss,602,computed OPM 89.0% vs reported 3256.0%
+DQ-05,WARNING,profitandloss,603,computed OPM 88.0% vs reported 4099.0%
+DQ-05,WARNING,profitandloss,604,computed OPM 86.1% vs reported 5235.0%
+DQ-05,WARNING,profitandloss,606,computed OPM 90.4% vs reported 7699.0%
+DQ-05,WARNING,profitandloss,607,computed OPM 90.9% vs reported 8024.0%
+DQ-05,WARNING,profitandloss,608,computed OPM 91.5% vs reported 8844.0%
+DQ-05,WARNING,profitandloss,609,computed OPM 92.1% vs reported 7778.0%
+DQ-05,WARNING,profitandloss,610,computed OPM 87.7% vs reported 12317.0%
+DQ-05,WARNING,profitandloss,611,computed OPM 88.1% vs reported 13695.0%
+DQ-05,WARNING,profitandloss,612,computed OPM 88.1% vs reported 15511.0%
+DQ-05,WARNING,profitandloss,613,computed OPM 87.9% vs reported 14306.0%
+DQ-05,WARNING,profitandloss,614,computed OPM 86.7% vs reported 17559.0%
+DQ-05,WARNING,profitandloss,615,computed OPM 85.5% vs reported 28347.0%
+DQ-05,WARNING,profitandloss,616,computed OPM 89.8% vs reported 22666.0%
+DQ-05,WARNING,profitandloss,617,computed OPM 88.9% vs reported 23872.0%
+DQ-05,WARNING,profitandloss,619,computed OPM 84.4% vs reported 4220.0%
+DQ-05,WARNING,profitandloss,620,computed OPM 83.7% vs reported 4759.0%
+DQ-05,WARNING,profitandloss,621,computed OPM 83.1% vs reported 5412.0%
+DQ-05,WARNING,profitandloss,622,computed OPM 81.6% vs reported 5910.0%
+DQ-05,WARNING,profitandloss,623,computed OPM 80.9% vs reported 6328.0%
+DQ-05,WARNING,profitandloss,624,computed OPM 78.9% vs reported 7499.0%
+DQ-05,WARNING,profitandloss,625,computed OPM 77.4% vs reported 8880.0%
+DQ-05,WARNING,profitandloss,626,computed OPM 75.2% vs reported 9861.0%
+DQ-05,WARNING,profitandloss,627,computed OPM 75.3% vs reported 11626.0%
+DQ-05,WARNING,profitandloss,628,computed OPM 75.5% vs reported 12857.0%
+DQ-05,WARNING,profitandloss,629,computed OPM 76.6% vs reported 14147.0%
+DQ-05,WARNING,profitandloss,630,computed OPM 76.3% vs reported 14659.0%
+DQ-05,WARNING,profitandloss,632,computed OPM 70.6% vs reported -15085.0%
+DQ-05,WARNING,profitandloss,633,computed OPM 66.4% vs reported -13084.0%
+DQ-05,WARNING,profitandloss,634,computed OPM 70.5% vs reported -16120.0%
+DQ-05,WARNING,profitandloss,635,computed OPM 88.1% vs reported -26955.0%
+DQ-05,WARNING,profitandloss,636,computed OPM 104.8% vs reported -37737.0%
+DQ-05,WARNING,profitandloss,637,computed OPM 117.1% vs reported -44906.0%
+DQ-05,WARNING,profitandloss,638,computed OPM 116.4% vs reported -50971.0%
+DQ-05,WARNING,profitandloss,639,computed OPM 100.6% vs reported -45190.0%
+DQ-05,WARNING,profitandloss,640,computed OPM 102.4% vs reported -44805.0%
+DQ-05,WARNING,profitandloss,641,computed OPM 84.7% vs reported -26558.0%
+DQ-05,WARNING,profitandloss,642,computed OPM 72.6% vs reported -17341.0%
+DQ-05,WARNING,profitandloss,643,computed OPM 62.4% vs reported -14152.0%
+DQ-05,WARNING,profitandloss,645,computed OPM 104.5% vs reported -178.0%
+DQ-05,WARNING,profitandloss,646,computed OPM 105.2% vs reported -225.0%
+DQ-05,WARNING,profitandloss,647,computed OPM 105.2% vs reported -221.0%
+DQ-05,WARNING,profitandloss,648,computed OPM 87.3% vs reported 764.0%
+DQ-05,WARNING,profitandloss,649,computed OPM 87.8% vs reported 919.0%
+DQ-05,WARNING,profitandloss,650,computed OPM 103.8% vs reported -262.0%
+DQ-05,WARNING,profitandloss,651,computed OPM 85.0% vs reported 1669.0%
+DQ-05,WARNING,profitandloss,652,computed OPM 84.6% vs reported 1772.0%
+DQ-05,WARNING,profitandloss,653,computed OPM 83.0% vs reported 2072.0%
+DQ-05,WARNING,profitandloss,654,computed OPM 93.7% vs reported 1016.0%
+DQ-05,WARNING,profitandloss,655,computed OPM 92.9% vs reported 1264.0%
+DQ-05,WARNING,profitandloss,656,computed OPM 87.4% vs reported 2577.0%
+DQ-05,WARNING,profitandloss,658,computed OPM 96.3% vs reported 745.0%
+DQ-05,WARNING,profitandloss,659,computed OPM 93.1% vs reported 1504.0%
+DQ-05,WARNING,profitandloss,660,computed OPM 95.2% vs reported 1655.0%
+DQ-05,WARNING,profitandloss,661,computed OPM 91.2% vs reported 1842.0%
+DQ-05,WARNING,profitandloss,662,computed OPM 95.2% vs reported 1806.0%
+DQ-05,WARNING,profitandloss,663,computed OPM 95.4% vs reported 1771.0%
+DQ-05,WARNING,profitandloss,664,computed OPM 98.7% vs reported 541.0%
+DQ-05,WARNING,profitandloss,665,computed OPM 101.5% vs reported -319.0%
+DQ-05,WARNING,profitandloss,666,computed OPM 100.5% vs reported -390.0%
+DQ-05,WARNING,profitandloss,667,computed OPM 103.4% vs reported -2163.0%
+DQ-05,WARNING,profitandloss,668,computed OPM 103.5% vs reported -1757.0%
+DQ-05,WARNING,profitandloss,669,computed OPM 102.0% vs reported -1829.0%
+DQ-05,WARNING,profitandloss,697,computed OPM 27.9% vs reported 286.0%
+DQ-05,WARNING,profitandloss,698,computed OPM 31.0% vs reported 335.0%
+DQ-05,WARNING,profitandloss,699,computed OPM 32.3% vs reported 288.0%
+DQ-05,WARNING,profitandloss,700,computed OPM 35.3% vs reported 329.0%
+DQ-05,WARNING,profitandloss,701,computed OPM 39.5% vs reported 379.0%
+DQ-05,WARNING,profitandloss,702,computed OPM 37.9% vs reported 942.0%
+DQ-05,WARNING,profitandloss,703,computed OPM 41.7% vs reported -437.0%
+DQ-05,WARNING,profitandloss,704,computed OPM 43.8% vs reported -553.0%
+DQ-05,WARNING,profitandloss,705,computed OPM 55.2% vs reported -2469.0%
+DQ-05,WARNING,profitandloss,706,computed OPM 51.4% vs reported -839.0%
+DQ-05,WARNING,profitandloss,707,computed OPM 42.7% vs reported 2067.0%
+DQ-05,WARNING,profitandloss,708,computed OPM 38.6% vs reported 2978.0%
+DQ-05,WARNING,profitandloss,815,computed OPM 60.9% vs reported -1789.0%
+DQ-05,WARNING,profitandloss,816,computed OPM 58.8% vs reported -1379.0%
+DQ-05,WARNING,profitandloss,817,computed OPM 73.0% vs reported -3366.0%
+DQ-05,WARNING,profitandloss,818,computed OPM 56.6% vs reported -2263.0%
+DQ-05,WARNING,profitandloss,819,computed OPM 66.4% vs reported -3965.0%
+DQ-05,WARNING,profitandloss,820,computed OPM 66.9% vs reported -4141.0%
+DQ-05,WARNING,profitandloss,821,computed OPM 66.2% vs reported -5114.0%
+DQ-05,WARNING,profitandloss,822,computed OPM 67.4% vs reported -5005.0%
+DQ-05,WARNING,profitandloss,823,computed OPM 90.8% vs reported -9958.0%
+DQ-05,WARNING,profitandloss,824,computed OPM 91.0% vs reported -8512.0%
+DQ-05,WARNING,profitandloss,825,computed OPM 79.4% vs reported -5746.0%
+DQ-05,WARNING,profitandloss,826,computed OPM 83.7% vs reported -13382.0%
+DQ-05,WARNING,profitandloss,1362,computed OPM 90.7% vs reported 855.0%
+DQ-05,WARNING,profitandloss,1363,computed OPM 96.1% vs reported 433.0%
+DQ-05,WARNING,profitandloss,1364,computed OPM 86.3% vs reported 1904.0%
+DQ-05,WARNING,profitandloss,1365,computed OPM 80.4% vs reported 3164.0%
+DQ-05,WARNING,profitandloss,1366,computed OPM 88.1% vs reported 2219.0%
+DQ-05,WARNING,profitandloss,1367,computed OPM 86.8% vs reported 3030.0%
+DQ-05,WARNING,profitandloss,1368,computed OPM 100.5% vs reported -151.0%
+DQ-05,WARNING,profitandloss,1369,computed OPM 88.6% vs reported 4069.0%
+DQ-05,WARNING,profitandloss,1370,computed OPM 100.0% vs reported 2.0%
+DQ-05,WARNING,profitandloss,1371,computed OPM 97.8% vs reported 558.0%
+DQ-05,WARNING,profitandloss,1372,computed OPM 88.0% vs reported 6521.0%
+DQ-05,WARNING,profitandloss,1373,computed OPM 76.3% vs reported 16331.0%
+DQ-06,WARNING,profitandloss,86,non-positive sales: 0
+DQ-07,WARNING,cashflow,1167,computed net cash -128.0 vs reported 532.0
+DQ-08,WARNING,profitandloss,99,tax_percentage out of sane range: -64.0
+DQ-08,WARNING,profitandloss,111,tax_percentage out of sane range: -75.0
+DQ-08,WARNING,profitandloss,112,tax_percentage out of sane range: -35.0
+DQ-08,WARNING,profitandloss,113,tax_percentage out of sane range: -19.0
+DQ-08,WARNING,profitandloss,147,tax_percentage out of sane range: -79.0
+DQ-08,WARNING,profitandloss,149,tax_percentage out of sane range: -47.0
+DQ-08,WARNING,profitandloss,150,tax_percentage out of sane range: -1.0
+DQ-08,WARNING,profitandloss,156,tax_percentage out of sane range: -40.0
+DQ-08,WARNING,profitandloss,165,tax_percentage out of sane range: -2.0
+DQ-08,WARNING,profitandloss,177,tax_percentage out of sane range: 65.0
+DQ-08,WARNING,profitandloss,224,tax_percentage out of sane range: -99.0
+DQ-08,WARNING,profitandloss,226,tax_percentage out of sane range: 67.0
+DQ-08,WARNING,profitandloss,272,tax_percentage out of sane range: -19.0
+DQ-08,WARNING,profitandloss,274,tax_percentage out of sane range: -9.0
+DQ-08,WARNING,profitandloss,276,tax_percentage out of sane range: -99.0
+DQ-08,WARNING,profitandloss,277,tax_percentage out of sane range: 77.0
+DQ-08,WARNING,profitandloss,283,tax_percentage out of sane range: 62.0
+DQ-08,WARNING,profitandloss,288,tax_percentage out of sane range: -99.0
+DQ-08,WARNING,profitandloss,289,tax_percentage out of sane range: -28.0
+DQ-08,WARNING,profitandloss,290,tax_percentage out of sane range: 99.0
+DQ-08,WARNING,profitandloss,311,tax_percentage out of sane range: -39.0
+DQ-08,WARNING,profitandloss,313,tax_percentage out of sane range: 64.0
+DQ-08,WARNING,profitandloss,315,tax_percentage out of sane range: 99.0
+DQ-08,WARNING,profitandloss,316,tax_percentage out of sane range: -25.0
+DQ-08,WARNING,profitandloss,319,tax_percentage out of sane range: -16.0
+DQ-08,WARNING,profitandloss,363,tax_percentage out of sane range: -13.0
+DQ-08,WARNING,profitandloss,365,tax_percentage out of sane range: -36.0
+DQ-08,WARNING,profitandloss,366,tax_percentage out of sane range: -99.0
+DQ-08,WARNING,profitandloss,439,tax_percentage out of sane range: -16.0
+DQ-08,WARNING,profitandloss,445,tax_percentage out of sane range: 99.0
+DQ-08,WARNING,profitandloss,471,tax_percentage out of sane range: -7.0
+DQ-08,WARNING,profitandloss,509,tax_percentage out of sane range: -12.0
+DQ-08,WARNING,profitandloss,514,tax_percentage out of sane range: 99.0
+DQ-08,WARNING,profitandloss,523,tax_percentage out of sane range: -1.0
+DQ-08,WARNING,profitandloss,592,tax_percentage out of sane range: -61.0
+DQ-08,WARNING,profitandloss,608,tax_percentage out of sane range: 75.0
+DQ-08,WARNING,profitandloss,609,tax_percentage out of sane range: 99.0
+DQ-08,WARNING,profitandloss,730,tax_percentage out of sane range: -74.0
+DQ-08,WARNING,profitandloss,747,tax_percentage out of sane range: 64.0
+DQ-08,WARNING,profitandloss,775,tax_percentage out of sane range: -6.0
+DQ-08,WARNING,profitandloss,776,tax_percentage out of sane range: -22.0
+DQ-08,WARNING,profitandloss,777,tax_percentage out of sane range: -17.0
+DQ-08,WARNING,profitandloss,778,tax_percentage out of sane range: -13.0
+DQ-08,WARNING,profitandloss,779,tax_percentage out of sane range: -14.0
+DQ-08,WARNING,profitandloss,794,tax_percentage out of sane range: 75.0
+DQ-08,WARNING,profitandloss,803,tax_percentage out of sane range: 70.0
+DQ-08,WARNING,profitandloss,805,tax_percentage out of sane range: -80.0
+DQ-08,WARNING,profitandloss,809,tax_percentage out of sane range: -30.0
+DQ-08,WARNING,profitandloss,828,tax_percentage out of sane range: 68.0
+DQ-08,WARNING,profitandloss,829,tax_percentage out of sane range: 80.0
+DQ-08,WARNING,profitandloss,830,tax_percentage out of sane range: 76.0
+DQ-08,WARNING,profitandloss,831,tax_percentage out of sane range: 66.0
+DQ-08,WARNING,profitandloss,843,tax_percentage out of sane range: -44.0
+DQ-08,WARNING,profitandloss,845,tax_percentage out of sane range: -8.0
+DQ-08,WARNING,profitandloss,881,tax_percentage out of sane range: 99.0
+DQ-08,WARNING,profitandloss,907,tax_percentage out of sane range: -5.0
+DQ-08,WARNING,profitandloss,915,tax_percentage out of sane range: 99.0
+DQ-08,WARNING,profitandloss,917,tax_percentage out of sane range: 99.0
+DQ-08,WARNING,profitandloss,920,tax_percentage out of sane range: 95.0
+DQ-08,WARNING,profitandloss,923,tax_percentage out of sane range: 99.0
+DQ-08,WARNING,profitandloss,946,tax_percentage out of sane range: -2.0
+DQ-08,WARNING,profitandloss,948,tax_percentage out of sane range: -17.0
+DQ-08,WARNING,profitandloss,955,tax_percentage out of sane range: -2.0
+DQ-08,WARNING,profitandloss,958,tax_percentage out of sane range: -25.0
+DQ-08,WARNING,profitandloss,1007,tax_percentage out of sane range: -31.0
+DQ-08,WARNING,profitandloss,1009,tax_percentage out of sane range: -37.0
+DQ-08,WARNING,profitandloss,1010,tax_percentage out of sane range: -35.0
+DQ-08,WARNING,profitandloss,1023,tax_percentage out of sane range: -10.0
+DQ-08,WARNING,profitandloss,1073,tax_percentage out of sane range: 99.0
+DQ-08,WARNING,profitandloss,1074,tax_percentage out of sane range: -66.0
+DQ-08,WARNING,profitandloss,1084,tax_percentage out of sane range: -6.0
+DQ-08,WARNING,profitandloss,1136,tax_percentage out of sane range: 99.0
+DQ-08,WARNING,profitandloss,1152,tax_percentage out of sane range: -8.0
+DQ-08,WARNING,profitandloss,1157,tax_percentage out of sane range: -14.0
+DQ-08,WARNING,profitandloss,1159,tax_percentage out of sane range: 92.0
+DQ-08,WARNING,profitandloss,1160,tax_percentage out of sane range: 99.0
+DQ-08,WARNING,profitandloss,1161,tax_percentage out of sane range: 72.0
+DQ-08,WARNING,profitandloss,1172,tax_percentage out of sane range: 78.0
+DQ-08,WARNING,profitandloss,1174,tax_percentage out of sane range: 99.0
+DQ-08,WARNING,profitandloss,1175,tax_percentage out of sane range: 99.0
+DQ-08,WARNING,profitandloss,1176,tax_percentage out of sane range: 99.0
+DQ-08,WARNING,profitandloss,1179,tax_percentage out of sane range: -99.0
+DQ-08,WARNING,profitandloss,1183,tax_percentage out of sane range: 99.0
+DQ-08,WARNING,profitandloss,1237,tax_percentage out of sane range: 99.0
+DQ-08,WARNING,profitandloss,1238,tax_percentage out of sane range: 99.0
+DQ-08,WARNING,profitandloss,1245,tax_percentage out of sane range: -12.0
+DQ-08,WARNING,profitandloss,1246,tax_percentage out of sane range: 69.0
+DQ-08,WARNING,profitandloss,1368,tax_percentage out of sane range: -99.0
+DQ-08,WARNING,profitandloss,1369,tax_percentage out of sane range: -10.0
+DQ-08,WARNING,profitandloss,1373,tax_percentage out of sane range: -2.0
+DQ-09,WARNING,profitandloss,167,dividend_payout exceeds 100%: 151.0
+DQ-09,WARNING,profitandloss,287,dividend_payout exceeds 100%: 194.0
+DQ-09,WARNING,profitandloss,288,dividend_payout exceeds 100%: 244.0
+DQ-09,WARNING,profitandloss,313,dividend_payout exceeds 100%: 151.0
+DQ-09,WARNING,profitandloss,341,dividend_payout exceeds 100%: 106.0
+DQ-09,WARNING,profitandloss,342,dividend_payout exceeds 100%: 102.0
+DQ-09,WARNING,profitandloss,355,dividend_payout exceeds 100%: 204.0
+DQ-09,WARNING,profitandloss,400,dividend_payout exceeds 100%: 121.0
+DQ-09,WARNING,profitandloss,402,dividend_payout exceeds 100%: 121.0
+DQ-09,WARNING,profitandloss,403,dividend_payout exceeds 100%: 133.0
+DQ-09,WARNING,profitandloss,404,dividend_payout exceeds 100%: 146.0
+DQ-09,WARNING,profitandloss,441,dividend_payout exceeds 100%: 117.0
+DQ-09,WARNING,profitandloss,619,dividend_payout exceeds 100%: 104.0
+DQ-09,WARNING,profitandloss,627,dividend_payout exceeds 100%: 119.0
+DQ-09,WARNING,profitandloss,768,dividend_payout exceeds 100%: 101.0
+DQ-09,WARNING,profitandloss,881,dividend_payout exceeds 100%: 205.0
+DQ-09,WARNING,profitandloss,915,dividend_payout exceeds 100%: 150.0
+DQ-09,WARNING,profitandloss,932,dividend_payout exceeds 100%: 168.0
+DQ-09,WARNING,profitandloss,1073,dividend_payout exceeds 100%: 859.0
+DQ-09,WARNING,profitandloss,1161,dividend_payout exceeds 100%: 210.0
+DQ-09,WARNING,profitandloss,1209,dividend_payout exceeds 100%: 150.0
+DQ-09,WARNING,profitandloss,1233,dividend_payout exceeds 100%: 105.0
+DQ-09,WARNING,profitandloss,1368,dividend_payout exceeds 100%: 123.0
+DQ-10,WARNING,documents,26,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,27,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,28,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,29,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,30,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,31,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,32,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,46,invalid or missing URL: nan
+DQ-10,WARNING,documents,47,invalid or missing URL: nan
+DQ-10,WARNING,documents,48,invalid or missing URL: nan
+DQ-10,WARNING,documents,56,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,57,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,58,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,59,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,60,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,61,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,62,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,63,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,64,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,70,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,71,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,72,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,74,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,75,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,76,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,77,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,79,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,80,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,90,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,91,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,92,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,94,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,95,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,96,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,107,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,108,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,109,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,111,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,112,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,118,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,122,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,127,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,128,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,140,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,141,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,143,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,144,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,151,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,152,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,153,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,154,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,155,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,156,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,157,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,158,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,159,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,160,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,175,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,176,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,187,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,191,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,192,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,207,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,208,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,223,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,224,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,239,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,240,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,255,invalid or missing URL: nan
+DQ-10,WARNING,documents,256,invalid or missing URL: nan
+DQ-10,WARNING,documents,259,invalid or missing URL: nan
+DQ-10,WARNING,documents,262,invalid or missing URL: nan
+DQ-10,WARNING,documents,266,invalid or missing URL: nan
+DQ-10,WARNING,documents,269,invalid or missing URL: nan
+DQ-10,WARNING,documents,270,invalid or missing URL: nan
+DQ-10,WARNING,documents,271,invalid or missing URL: nan
+DQ-10,WARNING,documents,272,invalid or missing URL: nan
+DQ-10,WARNING,documents,276,invalid or missing URL: nan
+DQ-10,WARNING,documents,279,invalid or missing URL: nan
+DQ-10,WARNING,documents,286,invalid or missing URL: nan
+DQ-10,WARNING,documents,287,invalid or missing URL: nan
+DQ-10,WARNING,documents,288,invalid or missing URL: nan
+DQ-10,WARNING,documents,298,invalid or missing URL: nan
+DQ-10,WARNING,documents,299,invalid or missing URL: nan
+DQ-10,WARNING,documents,300,invalid or missing URL: nan
+DQ-10,WARNING,documents,301,invalid or missing URL: nan
+DQ-10,WARNING,documents,302,invalid or missing URL: nan
+DQ-10,WARNING,documents,303,invalid or missing URL: nan
+DQ-10,WARNING,documents,304,invalid or missing URL: nan
+DQ-10,WARNING,documents,310,invalid or missing URL: nan
+DQ-10,WARNING,documents,311,invalid or missing URL: nan
+DQ-10,WARNING,documents,312,invalid or missing URL: nan
+DQ-10,WARNING,documents,315,invalid or missing URL: nan
+DQ-10,WARNING,documents,316,invalid or missing URL: nan
+DQ-10,WARNING,documents,317,invalid or missing URL: nan
+DQ-10,WARNING,documents,318,invalid or missing URL: nan
+DQ-10,WARNING,documents,319,invalid or missing URL: nan
+DQ-10,WARNING,documents,320,invalid or missing URL: nan
+DQ-10,WARNING,documents,323,invalid or missing URL: nan
+DQ-10,WARNING,documents,326,invalid or missing URL: nan
+DQ-10,WARNING,documents,329,invalid or missing URL: nan
+DQ-10,WARNING,documents,330,invalid or missing URL: nan
+DQ-10,WARNING,documents,335,invalid or missing URL: nan
+DQ-10,WARNING,documents,336,invalid or missing URL: nan
+DQ-10,WARNING,documents,351,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,352,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,367,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,368,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,378,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,383,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,384,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,399,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,400,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,415,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,431,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,432,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,439,invalid or missing URL: nan
+DQ-10,WARNING,documents,440,invalid or missing URL: nan
+DQ-10,WARNING,documents,447,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,448,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,457,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,458,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,459,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,460,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,461,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,462,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,463,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,464,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,478,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,479,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,480,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,486,invalid or missing URL: nan
+DQ-10,WARNING,documents,495,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,496,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,511,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,512,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,527,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,528,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,543,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,544,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,558,invalid or missing URL: nan
+DQ-10,WARNING,documents,561,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,574,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,575,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,589,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,590,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,591,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,603,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,605,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,606,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,607,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,620,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,621,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,622,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,623,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,624,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,640,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,641,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,656,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,657,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,672,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,673,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,689,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,705,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,719,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,720,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,721,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,731,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,732,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,733,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,734,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,735,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,736,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,737,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,752,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,753,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,768,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,769,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,770,invalid or missing URL: 'bseindia.com/xml-data/corpfiling/AttachHis/24a0940c-fa5a-4e36-a404-9dab3637ea0c.pdf'
+DQ-10,WARNING,documents,771,invalid or missing URL: 'bseindia.com/xml-data/corpfiling/AttachHis//ae413f27-7b30-4cdb-8f1b-8d82e5914e54.pdf'
+DQ-10,WARNING,documents,784,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,785,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,791,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,792,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,793,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,794,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,795,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,796,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,797,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,798,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,799,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,800,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,801,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,806,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,807,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,808,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,809,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,810,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,811,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,812,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,813,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,814,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,815,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,816,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,817,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,831,invalid or missing URL: nan
+DQ-10,WARNING,documents,832,invalid or missing URL: nan
+DQ-10,WARNING,documents,833,invalid or missing URL: nan
+DQ-10,WARNING,documents,848,invalid or missing URL: nan
+DQ-10,WARNING,documents,849,invalid or missing URL: nan
+DQ-10,WARNING,documents,851,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,852,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,853,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,854,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,855,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,856,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,857,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,858,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,859,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,860,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,861,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,862,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,863,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,864,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,865,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,879,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,880,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,881,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,896,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,897,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,899,invalid or missing URL: 'bseindia.com/xml-data/corpfiling/AttachHis//b9e0c871-3353-4ef4-855e-069bcfd848e1.pdf'
+DQ-10,WARNING,documents,900,invalid or missing URL: 'bseindia.com/bseplus/AnnualReport/500247/73932500247.pdf'
+DQ-10,WARNING,documents,901,invalid or missing URL: 'bseindia.com/bseplus/AnnualReport/500247/69160500247.pdf'
+DQ-10,WARNING,documents,905,invalid or missing URL: 'bseindia.com/bseplus/AnnualReport/500247/5002470317.pdf'
+DQ-10,WARNING,documents,906,invalid or missing URL: '5002470316.pdf'
+DQ-10,WARNING,documents,907,invalid or missing URL: '5002470315.pdf'
+DQ-10,WARNING,documents,909,invalid or missing URL: 'untitled'
+DQ-10,WARNING,documents,910,invalid or missing URL: 'bseindia.com/bseplus/AnnualReport/500247/5002470312.pdf'
+DQ-10,WARNING,documents,911,invalid or missing URL: '5002470311.pdf'
+DQ-10,WARNING,documents,912,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,913,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,920,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,921,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,922,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,923,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,924,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,925,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,926,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,927,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,928,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,929,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,934,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,935,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,936,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,937,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,938,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,939,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,940,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,941,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,942,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,943,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,944,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,945,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,960,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,961,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,970,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,971,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,972,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,973,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,974,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,975,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,976,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,977,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,992,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,993,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1008,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1009,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1024,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1025,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1040,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1041,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1043,invalid or missing URL: nan
+DQ-10,WARNING,documents,1072,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1073,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1088,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1089,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1103,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1104,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1105,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1120,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1121,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1135,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1136,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1137,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1152,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1153,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1168,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1169,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1183,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1184,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1185,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1199,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1200,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1201,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1209,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1210,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1211,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1212,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1213,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1214,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1215,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1216,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1217,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1233,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1247,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1248,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1249,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1263,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1264,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1265,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1280,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1281,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1295,invalid or missing URL: nan
+DQ-10,WARNING,documents,1296,invalid or missing URL: nan
+DQ-10,WARNING,documents,1297,invalid or missing URL: nan
+DQ-10,WARNING,documents,1312,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1313,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1328,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1329,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1344,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1345,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1360,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1361,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1376,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1377,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1390,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1391,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1392,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1393,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1407,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1408,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1409,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1424,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1425,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1440,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1441,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1456,invalid or missing URL: 'Null'
+DQ-10,WARNING,documents,1457,invalid or missing URL: 'Null'
+DQ-11,WARNING,profitandloss,881,eps (1.0) sign inconsistent with net_profit (-321)
+DQ-11,WARNING,profitandloss,915,eps (2.0) sign inconsistent with net_profit (-14)
+DQ-11,WARNING,profitandloss,1160,eps (-1.0) sign inconsistent with net_profit (12)
+DQ-12,WARNING,companies,TVSMOTOR,missing bse_profile URL
+DQ-13,WARNING,companies,TVSMOTOR,missing nse_profile URL
+DQ-14,WARNING,companies,TVSMOTOR,invalid or missing website URL: nan
+DQ-15,WARNING,profitandloss,JIOFIN,only 2 distinct year(s) of data (< 5)
