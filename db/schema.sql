@@ -178,6 +178,13 @@ CREATE TABLE IF NOT EXISTS financial_ratios (
     dividend_payout_ratio_pct   REAL,
     total_debt_cr                REAL,
     cash_from_operations_cr     REAL,
+    return_on_capital_employed_pct REAL,
+    return_on_assets_pct        REAL,
+    revenue_cagr_5yr            REAL,
+    pat_cagr_5yr                REAL,
+    eps_cagr_5yr                REAL,
+
+composite_quality_score         REAL,
     -- merged in from market_cap.xlsx:
     market_cap_crore             REAL,
     enterprise_value_crore       REAL,

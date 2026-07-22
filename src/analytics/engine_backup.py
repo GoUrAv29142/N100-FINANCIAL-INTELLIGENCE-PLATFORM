@@ -32,12 +32,7 @@ from src.analytics.cashflow_kpis import (
 
 def load_data():
     """
-    Load required tables from the SQLite database, plus market_cap.xlsx
-    loaded directly from the raw file since no standalone market_cap
-    table exists in SQLite (it was originally merged into financial_ratios
-    at ETL time, but the Ratio Engine rebuilds financial_ratios from
-    scratch and needs its own copy of market_cap to re-merge valuation
-    columns back in).
+    Load required tables from the SQLite database.
 
     Returns
     -------
@@ -79,14 +74,6 @@ def load_data():
         for table_name, df in data.items():
             logging.info("%s : %d rows", table_name, len(df))
 
-        # market_cap.xlsx: loaded fresh since no SQLite table exists for it
-        market_cap_path = Path("data") / "raw" / "core" / "market_cap.xlsx"
-        market_cap_df = pd.read_excel(market_cap_path, sheet_name="Sheet1", header=0)
-        market_cap_df["company_id"] = market_cap_df["company_id"].astype(str).str.strip()
-        market_cap_df["year"] = pd.to_numeric(market_cap_df["year"], errors="coerce").astype("Int64")
-        data["market_cap"] = market_cap_df
-        logging.info("market_cap : %d rows (loaded from raw Excel)", len(market_cap_df))
-
         return data
 
     finally:
@@ -103,8 +90,6 @@ def calculate_ratios(data):
     pnl = data["profitandloss"].copy()
     bs = data["balancesheet"].copy()
     cf = data["cashflow"].copy()
-    companies = data["companies"].copy()
-    companies["id"] = companies["id"].astype(str).str.strip()
 
     # Standardize join keys
     for df in [pnl, bs, cf]:
@@ -128,39 +113,12 @@ def calculate_ratios(data):
         suffixes=("_pnl", "_bs"),
     )
 
-    # Merge Cash Flow (LEFT join - a company-year with P&L+BS but no CF
-    # data still gets a row; CF-dependent KPIs will be null for it,
-    # matching the spec's existing "None if denominator missing" pattern
-    # rather than dropping the row entirely).
+    # Merge Cash Flow
     merged = merged.merge(
         cf,
         on=["company_id", "year"],
-        how="left",
+        how="inner",
     )
-    # Merge companies (face_value needed for book_value_per_share,
-    # roce_percentage/roe_percentage needed for Day 13 cross-checks)
-    merged = merged.merge(
-        companies[["id", "face_value", "roce_percentage", "roe_percentage"]],
-        left_on="company_id",
-        right_on="id",
-        how="left",
-    )
-
-    # Merge sectors (broad_sector needed for Financials carve-out, Day 13)
-    sectors_df = pd.read_sql_query("SELECT company_id, broad_sector FROM sectors", sqlite3.connect(Path("db") / "nifty100.db"))
-    sectors_df["company_id"] = sectors_df["company_id"].astype(str).str.strip()
-    merged = merged.merge(sectors_df, on="company_id", how="left")
-    merged["is_financials"] = merged["broad_sector"] == "Financials"
-    
-    # Merge market_cap (valuation columns for Screener/Sprint 3: P/E, P/B,
-    # EV/EBITDA, dividend yield, market cap). LEFT join since market_cap.xlsx
-    # only covers 2019-2024; earlier years correctly get null valuation data.
-    mc = data["market_cap"][
-        ["company_id", "year", "market_cap_crore", "enterprise_value_crore",
-         "pe_ratio", "pb_ratio", "ev_ebitda", "dividend_yield_pct"]
-    ].copy()
-    merged = merged.merge(mc, on=["company_id", "year"], how="left")
-
 
     # -----------------------------
     # Profitability Ratios
@@ -212,7 +170,7 @@ def calculate_ratios(data):
     )
 
     logging.info("Calculated profitability ratios.")
-    # -----------------------------
+               # -----------------------------
     # Leverage & Efficiency Ratios
     # -----------------------------
 
@@ -221,7 +179,6 @@ def calculate_ratios(data):
             row["borrowings"],
             row["equity_capital"],
             row["reserves"],
-            row["is_financials"],
         ),
         axis=1,
     )
@@ -262,30 +219,6 @@ def calculate_ratios(data):
     )
 
     logging.info("Calculated leverage & efficiency ratios.")
-    # -----------------------------
-    # Direct / pass-through KPIs (Sprint 2 Phase 2)
-    # -----------------------------
-
-    def _book_value_per_share(row):
-        equity_capital = row["equity_capital"]
-        reserves = row["reserves"]
-        face_value = row["face_value"]
-        if face_value is None or face_value == 0 or pd.isna(face_value):
-            return None
-        num_shares = equity_capital / face_value
-        if num_shares == 0:
-            return None
-        return round((equity_capital + reserves) / num_shares, 2)
-
-    merged["book_value_per_share"] = merged.apply(_book_value_per_share, axis=1)
-
-    merged["dividend_payout_ratio_pct"] = merged["dividend_payout"]
-
-    merged["total_debt_cr"] = merged["borrowings"]
-
-    merged["cash_from_operations_cr"] = merged["operating_activity"]
-
-    logging.info("Calculated direct pass-through KPIs (book value, dividend payout, total debt, CFO).")
     
 
     # ----------------------------------------
@@ -392,7 +325,7 @@ def calculate_ratios(data):
     lambda row: free_cash_flow(
         row["operating_activity"],
         row["investing_activity"],
-    ) if pd.notna(row["operating_activity"]) and pd.notna(row["investing_activity"]) else None,
+    ),
     axis=1,
 )
 
@@ -401,7 +334,7 @@ def calculate_ratios(data):
     lambda row: fcf_conversion_rate(
         row["free_cash_flow_cr"],
         row["operating_profit"],
-    ) if pd.notna(row["free_cash_flow_cr"]) else None,
+    ),
     axis=1,
 )
 
@@ -410,7 +343,7 @@ def calculate_ratios(data):
     lambda row: capex_intensity(
         row["investing_activity"],
         row["sales"],
-    ) if pd.notna(row["investing_activity"]) else (None, None),
+    ),
     axis=1,
 )
 
@@ -434,7 +367,7 @@ def calculate_ratios(data):
         row["operating_activity"],
         row["investing_activity"],
         row["financing_activity"],
-    ) if pd.notna(row["operating_activity"]) and pd.notna(row["investing_activity"]) and pd.notna(row["financing_activity"]) else "No CF Data",
+    ),
     axis=1,
 )
 
@@ -469,7 +402,7 @@ def calculate_ratios(data):
 
             for _, row in last_5_years.iterrows():
 
-                if row["net_profit"] == 0 or pd.isna(row["operating_activity"]):
+                if row["net_profit"] == 0:
                     continue
 
                 ratios.append(
@@ -492,59 +425,6 @@ def calculate_ratios(data):
                 merged.loc[idx, "cfo_quality_score"] = (
                     cfo_quality_score(avg_ratio)
                 )
-    # ----------------------------------------
-    # Composite Quality Score
-    # ----------------------------------------
-    # 0.3*ROE_score + 0.25*FCF_score + 0.25*ROCE_score + 0.20*DE_score
-    # Each component winsorized at P10/P90 then scaled 0-100.
-    # D/E is inverted (lower D/E = higher score, since less debt is better).
-
-    def _winsorize_and_score(series, invert=False):
-        s = series.copy().astype(float)
-        valid = s.dropna()
-        if len(valid) < 2:
-            return pd.Series([None] * len(s), index=s.index)
-
-        p10 = valid.quantile(0.10)
-        p90 = valid.quantile(0.90)
-
-        clipped = s.clip(lower=p10, upper=p90)
-
-        if p90 == p10:
-            return pd.Series([50.0 if pd.notna(v) else None for v in s], index=s.index)
-
-        score = (clipped - p10) / (p90 - p10) * 100
-        if invert:
-            score = 100 - score
-
-        return score.where(s.notna(), None)
-
-    roe_score = _winsorize_and_score(merged["return_on_equity_pct"])
-    fcf_score = _winsorize_and_score(merged["free_cash_flow_cr"])
-    roce_score = _winsorize_and_score(merged["return_on_capital_employed_pct"])
-    de_score = _winsorize_and_score(merged["debt_to_equity"], invert=True)
-
-    def _combine(row_idx):
-        scores = [
-            (roe_score.get(row_idx), 0.30),
-            (fcf_score.get(row_idx), 0.25),
-            (roce_score.get(row_idx), 0.25),
-            (de_score.get(row_idx), 0.20),
-        ]
-        valid_scores = [(s, w) for s, w in scores if s is not None and pd.notna(s)]
-        if not valid_scores:
-            return None
-        total_weight = sum(w for _, w in valid_scores)
-        weighted_sum = sum(s * w for s, w in valid_scores)
-        return round(weighted_sum / total_weight, 2)
-
-    merged["composite_quality_score"] = [
-        _combine(idx) for idx in merged.index
-    ]
-
-    logging.info("Calculated composite quality scores.")
-
-   
 
 
     return merged
@@ -578,22 +458,10 @@ def populate_financial_ratios(df):
             "capex_intensity_pct",
 
             "eps",
-            "book_value_per_share",
-            "dividend_payout_ratio_pct",
-            "total_debt_cr",
-            "cash_from_operations_cr",
 
             "sales_cagr_5yr",
             "pat_cagr_5yr",
             "eps_cagr_5yr",
-            "composite_quality_score",
-
-            "market_cap_crore",
-            "enterprise_value_crore",
-            "pe_ratio",
-            "pb_ratio",
-            "ev_ebitda",
-            "dividend_yield_pct",
         ]
     ].copy()
 
@@ -668,117 +536,8 @@ def generate_capital_allocation(merged):
     )
 
 
-def generate_edge_case_log(merged):
-    """
-    Day 13 deliverable: output/ratio_edge_cases.log
-
-    Cross-checks computed ROCE and ROE against the pre-computed
-    roce_percentage / roe_percentage fields in companies.xlsx, and logs
-    every CAGR turnaround / debt-free substitution already flagged
-    elsewhere in `merged`. Every anomaly is categorised as one of:
-    DATA_SOURCE_ISSUE, VERSION_DIFFERENCE, or FORMULA_DISCREPANCY.
-    """
-    Path("output").mkdir(exist_ok=True)
-    log_path = Path("output") / "ratio_edge_cases.log"
-
-    lines = []
-    lines.append(f"Ratio Edge Case Log - generated {pd.Timestamp.now().isoformat(timespec='seconds')}")
-    lines.append("=" * 80)
-
-    # Only cross-check the LATEST year per company, since roce_percentage
-    # and roe_percentage in companies.xlsx are current snapshot values,
-    # not historical - comparing every year against a single snapshot
-    # produces false positives for all older years.
-    latest_year_idx = merged.groupby("company_id")["year"].idxmax()
-    latest_rows = merged.loc[latest_year_idx]
-
-    # --- 1. ROCE Cross-Check (latest year only, diff > 5%) ---
-    lines.append("\n--- ROCE Cross-Check: latest year vs companies.roce_percentage (diff > 5%) ---")
-    roce_anomaly_count = 0
-    for _, row in latest_rows.iterrows():
-        computed = row.get("return_on_capital_employed_pct")
-        reported = row.get("roce_percentage")
-        if computed is None or reported is None or pd.isna(computed) or pd.isna(reported):
-            continue
-        diff = abs(computed - reported)
-        if diff > 5:
-            roce_anomaly_count += 1
-            category = "VERSION_DIFFERENCE" if row.get("is_financials") else "FORMULA_DISCREPANCY"
-            lines.append(
-                f"{row['company_id']} {row['year']} (latest): computed_ROCE={computed:.2f}% "
-                f"reported_ROCE={reported:.2f}% diff={diff:.2f}% "
-                f"sector={'Financials (sector-relative benchmark applies)' if row.get('is_financials') else 'Non-Financials'} "
-                f"category={category}"
-            )
-    lines.append(f"Total ROCE anomalies logged: {roce_anomaly_count}")
-# --- 2. ROE Cross-Check (latest year only, diff > 5%, or unit-mismatch) ---
-    lines.append("\n--- ROE Cross-Check: latest year vs companies.roe_percentage (diff > 5%) ---")
-    roe_anomaly_count = 0
-    for _, row in latest_rows.iterrows():
-        computed = row.get("return_on_equity_pct")
-        reported = row.get("roe_percentage")
-        if computed is None or reported is None or pd.isna(computed) or pd.isna(reported):
-            continue
-        if reported < 1.0 and computed > 5.0:
-            roe_anomaly_count += 1
-            lines.append(
-                f"{row['company_id']} {row['year']} (latest): computed_ROE={computed:.2f}% "
-                f"reported_ROE={reported} looks unit-mismatched (fraction vs percent) "
-                f"category=DATA_SOURCE_ISSUE"
-            )
-            continue
-        diff = abs(computed - reported)
-        if diff > 5:
-            roe_anomaly_count += 1
-            lines.append(
-                f"{row['company_id']} {row['year']} (latest): computed_ROE={computed:.2f}% "
-                f"reported_ROE={reported:.2f}% diff={diff:.2f}% "
-                f"category=FORMULA_DISCREPANCY"
-            )
-    lines.append(f"Total ROE anomalies logged: {roe_anomaly_count}")
-
-    
-
-    # --- 2b. Extreme ROE outliers (any year, |computed ROE| > 500%) ---
-    # These indicate a near-zero equity+reserves denominator, not a
-    # snapshot-timing mismatch. Flagged separately for investigation.
-    lines.append("\n--- Extreme ROE Outliers (|computed ROE| > 500%, denominator likely near-zero) ---")
-    extreme = merged[merged["return_on_equity_pct"].abs() > 500]
-    lines.append(f"Total extreme ROE outlier rows: {len(extreme)}")
-    for _, row in extreme.iterrows():
-        total_equity = row["equity_capital"] + row["reserves"]
-        lines.append(
-            f"{row['company_id']} {row['year']}: computed_ROE={row['return_on_equity_pct']:.2f}% "
-            f"equity_capital={row['equity_capital']} reserves={row['reserves']} "
-            f"total_equity={total_equity:.2f} category=FORMULA_EDGE_CASE_NEAR_ZERO_DENOMINATOR"
-        )
-
-   
-    # --- 3. Debt-free substitutions (ICR = None, displayed as 'Debt Free') ---
-    lines.append("\n--- Debt-Free ICR Substitutions ---")
-    debt_free_rows = merged[merged["icr_label"] == "Debt Free"]
-    lines.append(f"Total debt-free company-years (ICR substituted): {len(debt_free_rows)}")
-
-    # --- 4. CAGR turnaround / edge flags already computed ---
-    lines.append("\n--- CAGR Edge Case Flags (non-null flags across 3/5/10yr, revenue/PAT/EPS) ---")
-    flag_cols = [c for c in merged.columns if c.endswith("_flag") and "cagr" in c]
-    total_flagged = 0
-    for col in flag_cols:
-        count = merged[col].notna().sum()
-        if count > 0:
-            lines.append(f"{col}: {count} flagged rows")
-            total_flagged += count
-    lines.append(f"Total CAGR edge-case flags across all periods/metrics: {total_flagged}")
-
-    # --- 5. High leverage flags (non-financials only, D/E > 5) ---
-    lines.append("\n--- High Leverage Flags (D/E > 5, non-Financials only) ---")
-    high_lev_count = merged["high_leverage_flag"].sum() if "high_leverage_flag" in merged.columns else 0
-    lines.append(f"Total high-leverage flags: {int(high_lev_count)}")
-
-    with open(log_path, "w", encoding="utf-8") as f:
-        f.write("\n".join(lines))
-
-    logging.info("Generated %s", log_path)
+def generate_edge_case_log():
+    pass
 
 
 def main():
@@ -795,7 +554,6 @@ def main():
     print(sorted(merged.columns.tolist()))
     populate_financial_ratios(merged)
     generate_capital_allocation(merged)
-    generate_edge_case_log(merged)
 
     print("\nMerged Dataset\n")
     print(merged.shape)

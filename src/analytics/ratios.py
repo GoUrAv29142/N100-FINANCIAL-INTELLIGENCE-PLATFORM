@@ -38,25 +38,23 @@ def operating_profit_margin(
     Formula:
         (Operating Profit / Sales) × 100
 
-    If a reported OPM is provided, log a warning when the
-    calculated value differs by more than 1%.
-
-    Args:
-        operating_profit: Company's operating profit.
-        sales: Company's total sales/revenue.
-        reported_opm: OPM value from the source dataset.
+    If a realistic reported OPM percentage exists,
+    compare calculated value and log mismatch > 1%.
 
     Returns:
         Calculated OPM (%) rounded to 2 decimal places,
         or None if sales is zero.
     """
+
     if sales == 0:
         return None
 
     calculated_opm = round((operating_profit / sales) * 100, 2)
 
+    # Validate only realistic percentage values
     if (
         reported_opm is not None
+        and -100 <= reported_opm <= 100
         and abs(calculated_opm - reported_opm) > 1
     ):
         logger.warning(

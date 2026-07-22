@@ -32,12 +32,7 @@ from src.analytics.cashflow_kpis import (
 
 def load_data():
     """
-    Load required tables from the SQLite database, plus market_cap.xlsx
-    loaded directly from the raw file since no standalone market_cap
-    table exists in SQLite (it was originally merged into financial_ratios
-    at ETL time, but the Ratio Engine rebuilds financial_ratios from
-    scratch and needs its own copy of market_cap to re-merge valuation
-    columns back in).
+    Load required tables from the SQLite database.
 
     Returns
     -------
@@ -78,14 +73,6 @@ def load_data():
 
         for table_name, df in data.items():
             logging.info("%s : %d rows", table_name, len(df))
-
-        # market_cap.xlsx: loaded fresh since no SQLite table exists for it
-        market_cap_path = Path("data") / "raw" / "core" / "market_cap.xlsx"
-        market_cap_df = pd.read_excel(market_cap_path, sheet_name="Sheet1", header=0)
-        market_cap_df["company_id"] = market_cap_df["company_id"].astype(str).str.strip()
-        market_cap_df["year"] = pd.to_numeric(market_cap_df["year"], errors="coerce").astype("Int64")
-        data["market_cap"] = market_cap_df
-        logging.info("market_cap : %d rows (loaded from raw Excel)", len(market_cap_df))
 
         return data
 
@@ -128,14 +115,11 @@ def calculate_ratios(data):
         suffixes=("_pnl", "_bs"),
     )
 
-    # Merge Cash Flow (LEFT join - a company-year with P&L+BS but no CF
-    # data still gets a row; CF-dependent KPIs will be null for it,
-    # matching the spec's existing "None if denominator missing" pattern
-    # rather than dropping the row entirely).
+    # Merge Cash Flow
     merged = merged.merge(
         cf,
         on=["company_id", "year"],
-        how="left",
+        how="inner",
     )
     # Merge companies (face_value needed for book_value_per_share,
     # roce_percentage/roe_percentage needed for Day 13 cross-checks)
@@ -151,15 +135,6 @@ def calculate_ratios(data):
     sectors_df["company_id"] = sectors_df["company_id"].astype(str).str.strip()
     merged = merged.merge(sectors_df, on="company_id", how="left")
     merged["is_financials"] = merged["broad_sector"] == "Financials"
-    
-    # Merge market_cap (valuation columns for Screener/Sprint 3: P/E, P/B,
-    # EV/EBITDA, dividend yield, market cap). LEFT join since market_cap.xlsx
-    # only covers 2019-2024; earlier years correctly get null valuation data.
-    mc = data["market_cap"][
-        ["company_id", "year", "market_cap_crore", "enterprise_value_crore",
-         "pe_ratio", "pb_ratio", "ev_ebitda", "dividend_yield_pct"]
-    ].copy()
-    merged = merged.merge(mc, on=["company_id", "year"], how="left")
 
 
     # -----------------------------
@@ -212,7 +187,7 @@ def calculate_ratios(data):
     )
 
     logging.info("Calculated profitability ratios.")
-    # -----------------------------
+               # -----------------------------
     # Leverage & Efficiency Ratios
     # -----------------------------
 
@@ -392,7 +367,7 @@ def calculate_ratios(data):
     lambda row: free_cash_flow(
         row["operating_activity"],
         row["investing_activity"],
-    ) if pd.notna(row["operating_activity"]) and pd.notna(row["investing_activity"]) else None,
+    ),
     axis=1,
 )
 
@@ -401,7 +376,7 @@ def calculate_ratios(data):
     lambda row: fcf_conversion_rate(
         row["free_cash_flow_cr"],
         row["operating_profit"],
-    ) if pd.notna(row["free_cash_flow_cr"]) else None,
+    ),
     axis=1,
 )
 
@@ -410,7 +385,7 @@ def calculate_ratios(data):
     lambda row: capex_intensity(
         row["investing_activity"],
         row["sales"],
-    ) if pd.notna(row["investing_activity"]) else (None, None),
+    ),
     axis=1,
 )
 
@@ -434,7 +409,7 @@ def calculate_ratios(data):
         row["operating_activity"],
         row["investing_activity"],
         row["financing_activity"],
-    ) if pd.notna(row["operating_activity"]) and pd.notna(row["investing_activity"]) and pd.notna(row["financing_activity"]) else "No CF Data",
+    ),
     axis=1,
 )
 
@@ -469,7 +444,7 @@ def calculate_ratios(data):
 
             for _, row in last_5_years.iterrows():
 
-                if row["net_profit"] == 0 or pd.isna(row["operating_activity"]):
+                if row["net_profit"] == 0:
                     continue
 
                 ratios.append(
@@ -587,13 +562,6 @@ def populate_financial_ratios(df):
             "pat_cagr_5yr",
             "eps_cagr_5yr",
             "composite_quality_score",
-
-            "market_cap_crore",
-            "enterprise_value_crore",
-            "pe_ratio",
-            "pb_ratio",
-            "ev_ebitda",
-            "dividend_yield_pct",
         ]
     ].copy()
 

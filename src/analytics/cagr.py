@@ -1,29 +1,53 @@
 from __future__ import annotations
 
 from typing import Optional
+import math
 
-def asset_turnover(
-    sales: float,
-    total_assets: float,
-) -> Optional[float]:
+
+def calculate_cagr(
+    start_value: float,
+    end_value: float,
+    years_available: int,
+    required_years: int,
+) -> tuple[Optional[float], Optional[str]]:
     """
-    Calculate Asset Turnover Ratio.
+    Generic CAGR calculation with Sprint 2 edge-case handling.
 
-    Formula:
-        Sales / Total Assets
+    Returns
+    -------
+    (cagr_value, flag)
 
-    Args:
-        sales: Company's total sales/revenue.
-        total_assets: Company's total assets.
-
-    Returns:
-        Asset Turnover Ratio rounded to 2 decimal places,
-        or None if total_assets is zero.
+    Flags:
+        None
+        INSUFFICIENT
+        ZERO_BASE
+        TURNAROUND
+        DECLINE_TO_LOSS
+        BOTH_NEGATIVE
     """
-    if total_assets == 0:
-        return None
 
-    return round(sales / total_assets, 2)
+    if years_available < required_years:
+        return None, "INSUFFICIENT"
+
+    if start_value == 0:
+        return None, "ZERO_BASE"
+
+    if start_value > 0 and end_value < 0:
+        return None, "DECLINE_TO_LOSS"
+
+    if start_value < 0 and end_value > 0:
+        return None, "TURNAROUND"
+
+    if start_value < 0 and end_value < 0:
+        return None, "BOTH_NEGATIVE"
+
+    cagr = (
+        (end_value / start_value) ** (1 / required_years)
+        - 1
+    ) * 100
+
+    return round(cagr, 2), None
+
 
 def revenue_cagr(
     start_sales: float,
@@ -32,31 +56,9 @@ def revenue_cagr(
     required_years: int,
 ) -> tuple[Optional[float], Optional[str]]:
     """
-    Calculate Revenue CAGR.
-
-    Returns:
-        (revenue_cagr, flag)
+    Revenue CAGR.
     """
-    return calculate_cagr(
-        start_sales,
-        end_sales,
-        years_available,
-        required_years,
-    )
 
-
-def revenue_cagr(
-    start_sales: float,
-    end_sales: float,
-    years_available: int,
-    required_years: int,
-) -> tuple[Optional[float], Optional[str]]:
-    """
-    Calculate Revenue CAGR.
-
-    Returns:
-        (revenue_cagr, flag)
-    """
     return calculate_cagr(
         start_sales,
         end_sales,
@@ -72,17 +74,16 @@ def pat_cagr(
     required_years: int,
 ) -> tuple[Optional[float], Optional[str]]:
     """
-    Calculate PAT (Net Profit) CAGR.
-
-    Returns:
-        (pat_cagr, flag)
+    PAT (Net Profit) CAGR.
     """
+
     return calculate_cagr(
         start_profit,
         end_profit,
         years_available,
         required_years,
     )
+
 
 def eps_cagr(
     start_eps: float,
@@ -91,11 +92,9 @@ def eps_cagr(
     required_years: int,
 ) -> tuple[Optional[float], Optional[str]]:
     """
-    Calculate EPS CAGR.
-
-    Returns:
-        (eps_cagr, flag)
+    EPS CAGR.
     """
+
     return calculate_cagr(
         start_eps,
         end_eps,

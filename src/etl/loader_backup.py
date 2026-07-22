@@ -9,13 +9,8 @@ Two header layouts were found by inspecting the real files (Day 02):
   BANNER_HEADER_FILES : row 0 is a title banner, real headers on row 1
                          (i.e. header=1 in pandas' 0-indexed terms)
   CLEAN_HEADER_FILES   : headers already on row 0 (header=0, the default)
-
-Rejected rows during normalization / FK filtering are now logged to
-output/validation_failures.csv (DQ-07, DQ-08, DQ-03) instead of being
-silently dropped, per Sprint 2 row-count investigation findings.
 """
 
-import csv
 from pathlib import Path
 from typing import Dict
 
@@ -65,15 +60,12 @@ YEAR_TABLES = {
 }
 
 # Tables that have a `company_id` column needing normalize_ticker()
-# (companies uses `id` instead, handled separately)
+# (companies uses `id` instead — handled separately)
 COMPANY_ID_TABLES = {
     "profitandloss", "balancesheet", "cashflow", "analysis",
     "documents", "prosandcons", "sectors", "stock_prices",
     "financial_ratios", "market_cap", "peer_groups",
 }
-
-# Path to output/validation_failures.csv (project root / output /)
-VALIDATION_CSV_PATH = Path(__file__).resolve().parents[2] / "output" / "validation_failures.csv"
 
 
 def read_raw_sheet(table_name: str) -> pd.DataFrame:
@@ -99,7 +91,6 @@ def clean_companies(df: pd.DataFrame) -> pd.DataFrame:
     df["id"], rejects = _apply_normalizer(df["id"], normalize_ticker)
     if rejects:
         log.warning("companies: %d rows rejected during ticker normalization", len(rejects))
-        _log_rejects_to_validation_csv("companies", "DQ-08", rejects, "ticker normalization failed")
     df = df.dropna(subset=["id"])
     return df
 
@@ -112,13 +103,11 @@ def clean_table(table_name: str, df: pd.DataFrame) -> pd.DataFrame:
         df["company_id"], rejects = _apply_normalizer(df["company_id"], normalize_ticker)
         if rejects:
             log.warning("%s: %d rows rejected during ticker normalization", table_name, len(rejects))
-            _log_rejects_to_validation_csv(table_name, "DQ-08", rejects, "ticker normalization failed")
 
     if table_name in YEAR_TABLES and "year" in df.columns:
         df["year"], rejects = _apply_normalizer(df["year"], normalize_year)
         if rejects:
             log.warning("%s: %d rows rejected during year normalization", table_name, len(rejects))
-            _log_rejects_to_validation_csv(table_name, "DQ-07", rejects, "year normalization failed")
 
     # Drop rows where normalization produced a null (i.e. rejected rows)
     subset_cols = [c for c in ("company_id", "year") if c in df.columns]
@@ -133,7 +122,7 @@ def _apply_normalizer(series: pd.Series, fn):
     Apply a normalizer function element-wise, catching per-row errors
     instead of failing the whole column. Returns (cleaned_series, rejects)
     where rejects is a list of (index, original_value, error) for the
-    load_audit.csv / validation_failures.csv report.
+    load_audit.csv report.
     """
     cleaned = []
     rejects = []
@@ -144,29 +133,6 @@ def _apply_normalizer(series: pd.Series, fn):
             cleaned.append(None)
             rejects.append((idx, val, str(e)))
     return pd.Series(cleaned, index=series.index), rejects
-
-
-def _log_rejects_to_validation_csv(table_name: str, rule: str, rejects: list, detail_prefix: str):
-    """
-    Append rejected-row records to output/validation_failures.csv using
-    the same schema the validator already writes: rule, severity, table,
-    row_id, detail. DQ-07, DQ-08, and DQ-03 are all CRITICAL per spec
-    Section 14, so previously-silent row drops are now fully documented.
-    """
-    if not rejects:
-        return
-
-    VALIDATION_CSV_PATH.parent.mkdir(parents=True, exist_ok=True)
-    file_exists = VALIDATION_CSV_PATH.exists()
-
-    with open(VALIDATION_CSV_PATH, "a", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        if not file_exists:
-            writer.writerow(["rule", "severity", "table", "row_id", "detail"])
-        for idx, val, err in rejects:
-            writer.writerow([rule, "CRITICAL", table_name, idx, f"{detail_prefix}: {val!r} ({err})"])
-
-    log.info("Logged %d %s rejects for %s to validation_failures.csv", len(rejects), rule, table_name)
 
 
 def _deduplicate(table_name: str, df: pd.DataFrame, key_cols: list) -> pd.DataFrame:
@@ -188,21 +154,15 @@ def _filter_to_known_companies(table_name: str, df: pd.DataFrame, valid_ids: set
     Drop rows whose company_id is not present in companies.id.
     Enforces FK integrity (DQ-03) before write time, so companies stays
     the single source of truth for which 92 tickers are in-scope.
-    Rejected rows are now logged to validation_failures.csv.
     """
     if "company_id" not in df.columns:
         return df
     before = len(df)
-    orphan_mask = ~df["company_id"].isin(valid_ids)
-    orphans = df[orphan_mask]
-    df = df[~orphan_mask]
+    df = df[df["company_id"].isin(valid_ids)]
     dropped = before - len(df)
     if dropped:
         log.warning("%s: dropped %d rows with company_id not in companies (%d remain)",
                     table_name, dropped, len(df))
-        rejects = [(idx, row["company_id"], "company_id not found in companies.id")
-                   for idx, row in orphans.iterrows()]
-        _log_rejects_to_validation_csv(table_name, "DQ-03", rejects, "FK integrity failed")
     return df
 
 
@@ -220,10 +180,6 @@ def load_all_raw() -> Dict[str, pd.DataFrame]:
       - Rows whose company_id is not present in companies.id are
         dropped, so companies.xlsx's 92 tickers remain the single
         source of truth (exit criteria: SELECT COUNT(*) FROM companies = 92).
-        These rejections are logged to validation_failures.csv (DQ-03).
-      - Rows whose year fails normalization (e.g. 'TTM' trailing-twelve-
-        months labels) are dropped and logged (DQ-07), since fiscal-year
-        based KPIs (CAGR etc.) cannot use a non-fiscal-year label.
       - market_cap is merged into financial_ratios on (company_id, year),
         matching schema.sql's single financial_ratios table.
     """
