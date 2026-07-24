@@ -17,6 +17,9 @@ filters:
   revenue_cagr_5yr_min:
     column: revenue_cagr_5yr
     direction: min
+  revenue_cagr_3yr_min:
+    column: revenue_cagr_3yr
+    direction: min
   pat_cagr_5yr_min:
     column: pat_cagr_5yr
     direction: min
@@ -67,7 +70,7 @@ presets:
     name: "Value Pick"
     filters:
       pe_max: 20
-      pb_max: 3.0
+      pb_max: 4.5
       de_max: 2.0
       dividend_yield_min: 1
     rank_by: composite_quality_score

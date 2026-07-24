@@ -286,6 +286,15 @@ def calculate_ratios(data):
     merged["cash_from_operations_cr"] = merged["operating_activity"]
 
     logging.info("Calculated direct pass-through KPIs (book value, dividend payout, total debt, CFO).")
+     
+    merged["free_cash_flow_cr"] = merged.apply(
+    lambda row: free_cash_flow(
+        row["operating_activity"],
+        row["investing_activity"],
+    ) if pd.notna(row["operating_activity"]) and pd.notna(row["investing_activity"]) else None,
+    axis=1,
+)
+
     
 
     # ----------------------------------------
@@ -318,9 +327,13 @@ def calculate_ratios(data):
     for period in [3, 5, 10]:
        merged[f"eps_cagr_{period}yr"] = None
        merged[f"eps_cagr_{period}yr_flag"] = None
+    # ---------------- FCF CAGR ----------------
+    for period in [3, 5, 10]:
+       merged[f"fcf_cagr_{period}yr"] = None
+       merged[f"fcf_cagr_{period}yr_flag"] = None
 
     
-        # ----------------------------------------
+    # ----------------------------------------
     # Populate CAGR values
     # ----------------------------------------
 
@@ -358,6 +371,17 @@ def calculate_ratios(data):
 
                 merged.loc[current_index, f"sales_cagr_{period}yr"] = value
                 merged.loc[current_index, f"sales_cagr_{period}yr_flag"] = flag
+                # FCF CAGR (Day 17 requirement - uses same calculate_cagr
+                # engine as revenue/PAT/EPS, applied to free_cash_flow_cr)
+                fcf_value, fcf_flag = revenue_cagr(  # reuses same generic CAGR logic
+                    start["free_cash_flow_cr"],
+                    end["free_cash_flow_cr"],
+                    years_available,
+                    period,
+                )
+
+                merged.loc[current_index, f"fcf_cagr_{period}yr"] = fcf_value
+                merged.loc[current_index, f"fcf_cagr_{period}yr_flag"] = fcf_flag
 
                 # PAT CAGR
                 value, flag = pat_cagr(
@@ -388,13 +412,7 @@ def calculate_ratios(data):
     # Cash Flow KPIs
     # ----------------------------------------
 
-    merged["free_cash_flow_cr"] = merged.apply(
-    lambda row: free_cash_flow(
-        row["operating_activity"],
-        row["investing_activity"],
-    ) if pd.notna(row["operating_activity"]) and pd.notna(row["investing_activity"]) else None,
-    axis=1,
-)
+    
 
 
     merged["fcf_conversion_rate"] = merged.apply(
@@ -584,9 +602,15 @@ def populate_financial_ratios(df):
             "cash_from_operations_cr",
 
             "sales_cagr_5yr",
+            "sales_cagr_3yr",
             "pat_cagr_5yr",
             "eps_cagr_5yr",
+            "fcf_cagr_5yr",
+            "cfo_pat_ratio",
             "composite_quality_score",
+            "icr_label",
+            "net_profit",
+            "sales",
 
             "market_cap_crore",
             "enterprise_value_crore",
@@ -603,6 +627,7 @@ def populate_financial_ratios(df):
             "capex_intensity_pct": "capex_cr",
             "eps": "earnings_per_share",
             "sales_cagr_5yr": "revenue_cagr_5yr",
+            "sales_cagr_3yr": "revenue_cagr_3yr",
         },
         inplace=True
     )

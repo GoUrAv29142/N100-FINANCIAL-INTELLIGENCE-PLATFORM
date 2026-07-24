@@ -289,3 +289,411 @@
 2026-07-21 14:33:40,731 | INFO | __main__ | Wrote stock_prices: 5520 rows (rejected: 0)
 2026-07-21 14:33:40,747 | INFO | __main__ | Wrote financial_ratios: 1041 rows (rejected: 143)
 2026-07-21 14:33:40,753 | INFO | __main__ | Wrote peer_groups: 56 rows (rejected: 0)
+2026-07-23 11:29:56,458 | INFO | __main__ | Cleared output\validation_failures.csv for a fresh run
+2026-07-23 11:29:57,786 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-23 11:29:58,845 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-23 11:29:59,691 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-23 11:30:00,316 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-23 11:30:00,423 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-23 11:30:00,834 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-23 11:30:00,919 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-23 11:30:01,085 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-23 11:30:03,597 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-23 11:30:04,530 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-23 11:30:04,861 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-23 11:30:04,951 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-23 11:30:05,102 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-23 11:30:06,182 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-23 11:30:06,195 | WARNING | src.etl.loader | profitandloss: 103 rows rejected during year normalization
+2026-07-23 11:30:06,202 | INFO | src.etl.loader | Logged 103 DQ-07 rejects for profitandloss to validation_failures.csv
+2026-07-23 11:30:06,215 | WARNING | src.etl.loader | profitandloss: dropped 91 rows with company_id not in companies (1082 remain)
+2026-07-23 11:30:06,228 | INFO | src.etl.loader | Logged 91 DQ-03 rejects for profitandloss to validation_failures.csv
+2026-07-23 11:30:06,241 | WARNING | src.etl.loader | profitandloss: dropped 12 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-23 11:30:06,746 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-23 11:30:06,759 | WARNING | src.etl.loader | balancesheet: 5 rows rejected during year normalization
+2026-07-23 11:30:06,761 | INFO | src.etl.loader | Logged 5 DQ-07 rejects for balancesheet to validation_failures.csv
+2026-07-23 11:30:06,767 | WARNING | src.etl.loader | balancesheet: dropped 80 rows with company_id not in companies (1227 remain)
+2026-07-23 11:30:06,781 | INFO | src.etl.loader | Logged 80 DQ-03 rejects for balancesheet to validation_failures.csv
+2026-07-23 11:30:06,785 | WARNING | src.etl.loader | balancesheet: dropped 169 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-23 11:30:07,143 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-23 11:30:07,164 | WARNING | src.etl.loader | cashflow: dropped 96 rows with company_id not in companies (1091 remain)
+2026-07-23 11:30:07,183 | INFO | src.etl.loader | Logged 96 DQ-03 rejects for cashflow to validation_failures.csv
+2026-07-23 11:30:07,188 | WARNING | src.etl.loader | cashflow: dropped 35 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-23 11:30:07,225 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-23 11:30:07,233 | WARNING | src.etl.loader | analysis: dropped 4 rows with company_id not in companies (16 remain)
+2026-07-23 11:30:07,237 | INFO | src.etl.loader | Logged 4 DQ-03 rejects for analysis to validation_failures.csv
+2026-07-23 11:30:07,543 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-23 11:30:07,559 | WARNING | src.etl.loader | documents: dropped 128 rows with company_id not in companies (1457 remain)
+2026-07-23 11:30:07,570 | INFO | src.etl.loader | Logged 128 DQ-03 rejects for documents to validation_failures.csv
+2026-07-23 11:30:07,591 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-23 11:30:07,595 | WARNING | src.etl.loader | prosandcons: dropped 2 rows with company_id not in companies (14 remain)
+2026-07-23 11:30:07,597 | INFO | src.etl.loader | Logged 2 DQ-03 rejects for prosandcons to validation_failures.csv
+2026-07-23 11:30:07,633 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-23 11:30:09,372 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-23 11:30:09,772 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-23 11:30:09,786 | WARNING | src.etl.loader | financial_ratios: dropped 24 rows with company_id not in companies (1160 remain)
+2026-07-23 11:30:09,791 | INFO | src.etl.loader | Logged 24 DQ-03 rejects for financial_ratios to validation_failures.csv
+2026-07-23 11:30:09,793 | WARNING | src.etl.loader | financial_ratios: dropped 119 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-23 11:30:09,921 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-23 11:30:09,956 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-23 11:30:09,970 | INFO | src.etl.loader | Merged market_cap into financial_ratios: 1041 rows
+2026-07-23 11:30:11,119 | INFO | __main__ | Removed existing db\nifty100.db for a clean load
+2026-07-23 11:35:08,054 | INFO | __main__ | Cleared output\validation_failures.csv for a fresh run
+2026-07-23 11:35:09,159 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-23 11:35:09,951 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-23 11:35:10,482 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-23 11:35:10,874 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-23 11:35:10,926 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-23 11:35:11,267 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-23 11:35:11,311 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-23 11:35:11,392 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-23 11:35:13,161 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-23 11:35:13,646 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-23 11:35:13,828 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-23 11:35:13,883 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-23 11:35:13,957 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-23 11:35:14,530 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-23 11:35:14,550 | WARNING | src.etl.loader | profitandloss: 103 rows rejected during year normalization
+2026-07-23 11:35:14,553 | INFO | src.etl.loader | Logged 103 DQ-07 rejects for profitandloss to validation_failures.csv
+2026-07-23 11:35:14,562 | WARNING | src.etl.loader | profitandloss: dropped 91 rows with company_id not in companies (1082 remain)
+2026-07-23 11:35:14,578 | INFO | src.etl.loader | Logged 91 DQ-03 rejects for profitandloss to validation_failures.csv
+2026-07-23 11:35:14,584 | WARNING | src.etl.loader | profitandloss: dropped 12 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-23 11:35:15,115 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-23 11:35:15,131 | WARNING | src.etl.loader | balancesheet: 5 rows rejected during year normalization
+2026-07-23 11:35:15,134 | INFO | src.etl.loader | Logged 5 DQ-07 rejects for balancesheet to validation_failures.csv
+2026-07-23 11:35:15,144 | WARNING | src.etl.loader | balancesheet: dropped 80 rows with company_id not in companies (1227 remain)
+2026-07-23 11:35:15,165 | INFO | src.etl.loader | Logged 80 DQ-03 rejects for balancesheet to validation_failures.csv
+2026-07-23 11:35:15,174 | WARNING | src.etl.loader | balancesheet: dropped 169 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-23 11:35:15,523 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-23 11:35:15,538 | WARNING | src.etl.loader | cashflow: dropped 96 rows with company_id not in companies (1091 remain)
+2026-07-23 11:35:15,553 | INFO | src.etl.loader | Logged 96 DQ-03 rejects for cashflow to validation_failures.csv
+2026-07-23 11:35:15,557 | WARNING | src.etl.loader | cashflow: dropped 35 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-23 11:35:15,586 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-23 11:35:15,594 | WARNING | src.etl.loader | analysis: dropped 4 rows with company_id not in companies (16 remain)
+2026-07-23 11:35:15,596 | INFO | src.etl.loader | Logged 4 DQ-03 rejects for analysis to validation_failures.csv
+2026-07-23 11:35:15,901 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-23 11:35:15,921 | WARNING | src.etl.loader | documents: dropped 128 rows with company_id not in companies (1457 remain)
+2026-07-23 11:35:15,940 | INFO | src.etl.loader | Logged 128 DQ-03 rejects for documents to validation_failures.csv
+2026-07-23 11:35:15,965 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-23 11:35:15,973 | WARNING | src.etl.loader | prosandcons: dropped 2 rows with company_id not in companies (14 remain)
+2026-07-23 11:35:15,976 | INFO | src.etl.loader | Logged 2 DQ-03 rejects for prosandcons to validation_failures.csv
+2026-07-23 11:35:16,023 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-23 11:35:17,708 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-23 11:35:18,409 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-23 11:35:18,448 | WARNING | src.etl.loader | financial_ratios: dropped 24 rows with company_id not in companies (1160 remain)
+2026-07-23 11:35:18,461 | INFO | src.etl.loader | Logged 24 DQ-03 rejects for financial_ratios to validation_failures.csv
+2026-07-23 11:35:18,469 | WARNING | src.etl.loader | financial_ratios: dropped 119 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-23 11:35:18,770 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-23 11:35:18,802 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-23 11:35:18,813 | INFO | src.etl.loader | Merged market_cap into financial_ratios: 1041 rows
+2026-07-23 11:35:20,327 | INFO | __main__ | Removed existing db\nifty100.db for a clean load
+2026-07-23 11:37:24,595 | INFO | __main__ | Cleared output\validation_failures.csv for a fresh run
+2026-07-23 11:37:25,256 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-23 11:37:25,794 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-23 11:37:26,406 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-23 11:37:26,875 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-23 11:37:26,900 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-23 11:37:27,187 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-23 11:37:27,212 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-23 11:37:27,268 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-23 11:37:29,322 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-23 11:37:30,076 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-23 11:37:30,291 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-23 11:37:30,347 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-23 11:37:30,516 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-23 11:37:31,713 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-23 11:37:31,746 | WARNING | src.etl.loader | profitandloss: 103 rows rejected during year normalization
+2026-07-23 11:37:31,753 | INFO | src.etl.loader | Logged 103 DQ-07 rejects for profitandloss to validation_failures.csv
+2026-07-23 11:37:31,781 | WARNING | src.etl.loader | profitandloss: dropped 91 rows with company_id not in companies (1082 remain)
+2026-07-23 11:37:31,816 | INFO | src.etl.loader | Logged 91 DQ-03 rejects for profitandloss to validation_failures.csv
+2026-07-23 11:37:31,828 | WARNING | src.etl.loader | profitandloss: dropped 12 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-23 11:37:32,708 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-23 11:37:32,724 | WARNING | src.etl.loader | balancesheet: 5 rows rejected during year normalization
+2026-07-23 11:37:32,725 | INFO | src.etl.loader | Logged 5 DQ-07 rejects for balancesheet to validation_failures.csv
+2026-07-23 11:37:32,730 | WARNING | src.etl.loader | balancesheet: dropped 80 rows with company_id not in companies (1227 remain)
+2026-07-23 11:37:32,743 | INFO | src.etl.loader | Logged 80 DQ-03 rejects for balancesheet to validation_failures.csv
+2026-07-23 11:37:32,747 | WARNING | src.etl.loader | balancesheet: dropped 169 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-23 11:37:33,174 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-23 11:37:33,212 | WARNING | src.etl.loader | cashflow: dropped 96 rows with company_id not in companies (1091 remain)
+2026-07-23 11:37:33,246 | INFO | src.etl.loader | Logged 96 DQ-03 rejects for cashflow to validation_failures.csv
+2026-07-23 11:37:33,254 | WARNING | src.etl.loader | cashflow: dropped 35 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-23 11:37:33,318 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-23 11:37:33,336 | WARNING | src.etl.loader | analysis: dropped 4 rows with company_id not in companies (16 remain)
+2026-07-23 11:37:33,344 | INFO | src.etl.loader | Logged 4 DQ-03 rejects for analysis to validation_failures.csv
+2026-07-23 11:37:34,002 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-23 11:37:34,101 | WARNING | src.etl.loader | documents: dropped 128 rows with company_id not in companies (1457 remain)
+2026-07-23 11:37:34,180 | INFO | src.etl.loader | Logged 128 DQ-03 rejects for documents to validation_failures.csv
+2026-07-23 11:37:34,231 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-23 11:37:34,236 | WARNING | src.etl.loader | prosandcons: dropped 2 rows with company_id not in companies (14 remain)
+2026-07-23 11:37:34,239 | INFO | src.etl.loader | Logged 2 DQ-03 rejects for prosandcons to validation_failures.csv
+2026-07-23 11:37:34,274 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-23 11:37:37,095 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-23 11:37:38,330 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-23 11:37:38,396 | WARNING | src.etl.loader | financial_ratios: dropped 24 rows with company_id not in companies (1160 remain)
+2026-07-23 11:37:38,423 | INFO | src.etl.loader | Logged 24 DQ-03 rejects for financial_ratios to validation_failures.csv
+2026-07-23 11:37:38,435 | WARNING | src.etl.loader | financial_ratios: dropped 119 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-23 11:37:38,622 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-23 11:37:38,663 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-23 11:37:38,678 | INFO | src.etl.loader | Merged market_cap into financial_ratios: 1041 rows
+2026-07-23 11:37:41,232 | INFO | __main__ | Removed existing db\nifty100.db for a clean load
+2026-07-23 11:41:12,499 | INFO | __main__ | Cleared output\validation_failures.csv for a fresh run
+2026-07-23 11:41:13,401 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-23 11:41:14,005 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-23 11:41:14,492 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-23 11:41:14,751 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-23 11:41:14,769 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-23 11:41:14,977 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-23 11:41:14,997 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-23 11:41:15,028 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-23 11:41:16,244 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-23 11:41:16,615 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-23 11:41:16,754 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-23 11:41:16,778 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-23 11:41:16,839 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-23 11:41:17,325 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-23 11:41:17,335 | WARNING | src.etl.loader | profitandloss: 103 rows rejected during year normalization
+2026-07-23 11:41:17,338 | INFO | src.etl.loader | Logged 103 DQ-07 rejects for profitandloss to validation_failures.csv
+2026-07-23 11:41:17,343 | WARNING | src.etl.loader | profitandloss: dropped 91 rows with company_id not in companies (1082 remain)
+2026-07-23 11:41:17,358 | INFO | src.etl.loader | Logged 91 DQ-03 rejects for profitandloss to validation_failures.csv
+2026-07-23 11:41:17,361 | WARNING | src.etl.loader | profitandloss: dropped 12 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-23 11:41:17,967 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-23 11:41:17,979 | WARNING | src.etl.loader | balancesheet: 5 rows rejected during year normalization
+2026-07-23 11:41:17,982 | INFO | src.etl.loader | Logged 5 DQ-07 rejects for balancesheet to validation_failures.csv
+2026-07-23 11:41:17,990 | WARNING | src.etl.loader | balancesheet: dropped 80 rows with company_id not in companies (1227 remain)
+2026-07-23 11:41:18,005 | INFO | src.etl.loader | Logged 80 DQ-03 rejects for balancesheet to validation_failures.csv
+2026-07-23 11:41:18,008 | WARNING | src.etl.loader | balancesheet: dropped 169 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-23 11:41:18,324 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-23 11:41:18,341 | WARNING | src.etl.loader | cashflow: dropped 96 rows with company_id not in companies (1091 remain)
+2026-07-23 11:41:18,353 | INFO | src.etl.loader | Logged 96 DQ-03 rejects for cashflow to validation_failures.csv
+2026-07-23 11:41:18,357 | WARNING | src.etl.loader | cashflow: dropped 35 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-23 11:41:18,378 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-23 11:41:18,382 | WARNING | src.etl.loader | analysis: dropped 4 rows with company_id not in companies (16 remain)
+2026-07-23 11:41:18,386 | INFO | src.etl.loader | Logged 4 DQ-03 rejects for analysis to validation_failures.csv
+2026-07-23 11:41:18,615 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-23 11:41:18,630 | WARNING | src.etl.loader | documents: dropped 128 rows with company_id not in companies (1457 remain)
+2026-07-23 11:41:18,644 | INFO | src.etl.loader | Logged 128 DQ-03 rejects for documents to validation_failures.csv
+2026-07-23 11:41:18,663 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-23 11:41:18,668 | WARNING | src.etl.loader | prosandcons: dropped 2 rows with company_id not in companies (14 remain)
+2026-07-23 11:41:18,672 | INFO | src.etl.loader | Logged 2 DQ-03 rejects for prosandcons to validation_failures.csv
+2026-07-23 11:41:18,708 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-23 11:41:20,358 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-23 11:41:20,808 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-23 11:41:20,821 | WARNING | src.etl.loader | financial_ratios: dropped 24 rows with company_id not in companies (1160 remain)
+2026-07-23 11:41:20,826 | INFO | src.etl.loader | Logged 24 DQ-03 rejects for financial_ratios to validation_failures.csv
+2026-07-23 11:41:20,828 | WARNING | src.etl.loader | financial_ratios: dropped 119 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-23 11:41:20,947 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-23 11:41:20,977 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-23 11:41:20,988 | INFO | src.etl.loader | Merged market_cap into financial_ratios: 1041 rows
+2026-07-23 11:41:22,231 | INFO | __main__ | Removed existing db\nifty100.db for a clean load
+2026-07-23 11:41:22,353 | INFO | __main__ | Schema applied from db\schema.sql
+2026-07-23 11:41:22,367 | INFO | __main__ | Wrote companies: 92 rows (rejected: 0)
+2026-07-23 11:41:22,391 | INFO | __main__ | Wrote profitandloss: 1070 rows (rejected: 206)
+2026-07-23 11:41:22,415 | INFO | __main__ | Wrote balancesheet: 1058 rows (rejected: 254)
+2026-07-23 11:41:22,463 | INFO | __main__ | Wrote cashflow: 1056 rows (rejected: 131)
+2026-07-23 11:41:22,472 | INFO | __main__ | Wrote analysis: 16 rows (rejected: 4)
+2026-07-23 11:41:22,485 | INFO | __main__ | Wrote documents: 1457 rows (rejected: 128)
+2026-07-23 11:41:22,495 | INFO | __main__ | Wrote prosandcons: 14 rows (rejected: 2)
+2026-07-23 11:41:22,505 | INFO | __main__ | Wrote sectors: 92 rows (rejected: 0)
+2026-07-23 11:41:22,568 | INFO | __main__ | Wrote stock_prices: 5520 rows (rejected: 0)
+2026-07-23 11:41:22,598 | INFO | __main__ | Wrote financial_ratios: 1041 rows (rejected: 143)
+2026-07-23 11:41:22,616 | INFO | __main__ | Wrote peer_groups: 56 rows (rejected: 0)
+2026-07-23 11:58:14,486 | WARNING | __main__ | Unknown filter key 'revenue_cagr_3yr_min' - skipping
+2026-07-23 12:19:22,701 | INFO | __main__ | Cleared output\validation_failures.csv for a fresh run
+2026-07-23 12:19:23,854 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-23 12:19:24,516 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-23 12:19:25,440 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-23 12:19:26,156 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-23 12:19:26,225 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-23 12:19:26,905 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-23 12:19:26,950 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-23 12:19:27,053 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-23 12:19:30,177 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-23 12:19:31,390 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-23 12:19:31,749 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-23 12:19:31,774 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-23 12:19:31,841 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-23 12:19:32,919 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-23 12:19:32,947 | WARNING | src.etl.loader | profitandloss: 103 rows rejected during year normalization
+2026-07-23 12:19:32,957 | INFO | src.etl.loader | Logged 103 DQ-07 rejects for profitandloss to validation_failures.csv
+2026-07-23 12:19:32,977 | WARNING | src.etl.loader | profitandloss: dropped 91 rows with company_id not in companies (1082 remain)
+2026-07-23 12:19:33,019 | INFO | src.etl.loader | Logged 91 DQ-03 rejects for profitandloss to validation_failures.csv
+2026-07-23 12:19:33,030 | WARNING | src.etl.loader | profitandloss: dropped 12 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-23 12:19:33,935 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-23 12:19:33,953 | WARNING | src.etl.loader | balancesheet: 5 rows rejected during year normalization
+2026-07-23 12:19:33,956 | INFO | src.etl.loader | Logged 5 DQ-07 rejects for balancesheet to validation_failures.csv
+2026-07-23 12:19:33,970 | WARNING | src.etl.loader | balancesheet: dropped 80 rows with company_id not in companies (1227 remain)
+2026-07-23 12:19:34,004 | INFO | src.etl.loader | Logged 80 DQ-03 rejects for balancesheet to validation_failures.csv
+2026-07-23 12:19:34,012 | WARNING | src.etl.loader | balancesheet: dropped 169 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-23 12:19:34,763 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-23 12:19:34,808 | WARNING | src.etl.loader | cashflow: dropped 96 rows with company_id not in companies (1091 remain)
+2026-07-23 12:19:34,857 | INFO | src.etl.loader | Logged 96 DQ-03 rejects for cashflow to validation_failures.csv
+2026-07-23 12:19:34,867 | WARNING | src.etl.loader | cashflow: dropped 35 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-23 12:19:34,937 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-23 12:19:34,943 | WARNING | src.etl.loader | analysis: dropped 4 rows with company_id not in companies (16 remain)
+2026-07-23 12:19:34,947 | INFO | src.etl.loader | Logged 4 DQ-03 rejects for analysis to validation_failures.csv
+2026-07-23 12:19:35,232 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-23 12:19:35,247 | WARNING | src.etl.loader | documents: dropped 128 rows with company_id not in companies (1457 remain)
+2026-07-23 12:19:35,263 | INFO | src.etl.loader | Logged 128 DQ-03 rejects for documents to validation_failures.csv
+2026-07-23 12:19:35,283 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-23 12:19:35,289 | WARNING | src.etl.loader | prosandcons: dropped 2 rows with company_id not in companies (14 remain)
+2026-07-23 12:19:35,292 | INFO | src.etl.loader | Logged 2 DQ-03 rejects for prosandcons to validation_failures.csv
+2026-07-23 12:19:35,334 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-23 12:19:37,060 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-23 12:19:38,101 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-23 12:19:38,137 | WARNING | src.etl.loader | financial_ratios: dropped 24 rows with company_id not in companies (1160 remain)
+2026-07-23 12:19:38,146 | INFO | src.etl.loader | Logged 24 DQ-03 rejects for financial_ratios to validation_failures.csv
+2026-07-23 12:19:38,154 | WARNING | src.etl.loader | financial_ratios: dropped 119 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-23 12:19:38,463 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-23 12:19:38,530 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-23 12:19:38,555 | INFO | src.etl.loader | Merged market_cap into financial_ratios: 1041 rows
+2026-07-23 12:19:41,019 | INFO | __main__ | Removed existing db\nifty100.db for a clean load
+2026-07-23 12:19:41,183 | INFO | __main__ | Schema applied from db\schema.sql
+2026-07-23 12:19:41,211 | INFO | __main__ | Wrote companies: 92 rows (rejected: 0)
+2026-07-23 12:19:41,263 | INFO | __main__ | Wrote profitandloss: 1070 rows (rejected: 206)
+2026-07-23 12:19:41,348 | INFO | __main__ | Wrote balancesheet: 1058 rows (rejected: 254)
+2026-07-23 12:19:41,461 | INFO | __main__ | Wrote cashflow: 1056 rows (rejected: 131)
+2026-07-23 12:19:41,478 | INFO | __main__ | Wrote analysis: 16 rows (rejected: 4)
+2026-07-23 12:19:41,514 | INFO | __main__ | Wrote documents: 1457 rows (rejected: 128)
+2026-07-23 12:19:41,531 | INFO | __main__ | Wrote prosandcons: 14 rows (rejected: 2)
+2026-07-23 12:19:41,552 | INFO | __main__ | Wrote sectors: 92 rows (rejected: 0)
+2026-07-23 12:19:41,729 | INFO | __main__ | Wrote stock_prices: 5520 rows (rejected: 0)
+2026-07-23 12:19:41,802 | INFO | __main__ | Wrote financial_ratios: 1041 rows (rejected: 143)
+2026-07-23 12:19:41,821 | INFO | __main__ | Wrote peer_groups: 56 rows (rejected: 0)
+2026-07-24 07:58:58,677 | INFO | __main__ | Generated output\screener_output.xlsx
+2026-07-24 07:59:03,044 | INFO | __main__ | Generated output\screener_output.xlsx
+2026-07-24 07:59:06,502 | INFO | __main__ | Generated output\screener_output.xlsx
+2026-07-24 07:59:08,157 | INFO | __main__ | Generated output\screener_output.xlsx
+2026-07-24 07:59:10,171 | INFO | __main__ | Generated output\screener_output.xlsx
+2026-07-24 07:59:12,234 | INFO | __main__ | Generated output\screener_output.xlsx
+2026-07-24 08:10:27,061 | INFO | __main__ | Generated output\screener_output.xlsx
+2026-07-24 08:13:18,174 | INFO | __main__ | Cleared output\validation_failures.csv for a fresh run
+2026-07-24 08:13:18,912 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-24 08:13:19,503 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-24 08:13:20,085 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-24 08:13:20,417 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-24 08:13:20,494 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-24 08:13:20,903 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-24 08:13:21,125 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-24 08:13:21,209 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-24 08:13:23,305 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-24 08:13:24,000 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-24 08:13:24,335 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-24 08:13:24,394 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-24 08:13:24,481 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-24 08:13:25,056 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-24 08:13:25,070 | WARNING | src.etl.loader | profitandloss: 103 rows rejected during year normalization
+2026-07-24 08:13:25,073 | INFO | src.etl.loader | Logged 103 DQ-07 rejects for profitandloss to validation_failures.csv
+2026-07-24 08:13:25,079 | WARNING | src.etl.loader | profitandloss: dropped 91 rows with company_id not in companies (1082 remain)
+2026-07-24 08:13:25,094 | INFO | src.etl.loader | Logged 91 DQ-03 rejects for profitandloss to validation_failures.csv
+2026-07-24 08:13:25,100 | WARNING | src.etl.loader | profitandloss: dropped 12 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-24 08:13:25,543 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-24 08:13:25,558 | WARNING | src.etl.loader | balancesheet: 5 rows rejected during year normalization
+2026-07-24 08:13:25,559 | INFO | src.etl.loader | Logged 5 DQ-07 rejects for balancesheet to validation_failures.csv
+2026-07-24 08:13:25,565 | WARNING | src.etl.loader | balancesheet: dropped 80 rows with company_id not in companies (1227 remain)
+2026-07-24 08:13:25,577 | INFO | src.etl.loader | Logged 80 DQ-03 rejects for balancesheet to validation_failures.csv
+2026-07-24 08:13:25,581 | WARNING | src.etl.loader | balancesheet: dropped 169 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-24 08:13:25,986 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-24 08:13:26,010 | WARNING | src.etl.loader | cashflow: dropped 96 rows with company_id not in companies (1091 remain)
+2026-07-24 08:13:26,024 | INFO | src.etl.loader | Logged 96 DQ-03 rejects for cashflow to validation_failures.csv
+2026-07-24 08:13:26,027 | WARNING | src.etl.loader | cashflow: dropped 35 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-24 08:13:26,058 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-24 08:13:26,064 | WARNING | src.etl.loader | analysis: dropped 4 rows with company_id not in companies (16 remain)
+2026-07-24 08:13:26,067 | INFO | src.etl.loader | Logged 4 DQ-03 rejects for analysis to validation_failures.csv
+2026-07-24 08:13:26,333 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-24 08:13:26,354 | WARNING | src.etl.loader | documents: dropped 128 rows with company_id not in companies (1457 remain)
+2026-07-24 08:13:26,377 | INFO | src.etl.loader | Logged 128 DQ-03 rejects for documents to validation_failures.csv
+2026-07-24 08:13:26,397 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-24 08:13:26,404 | WARNING | src.etl.loader | prosandcons: dropped 2 rows with company_id not in companies (14 remain)
+2026-07-24 08:13:26,406 | INFO | src.etl.loader | Logged 2 DQ-03 rejects for prosandcons to validation_failures.csv
+2026-07-24 08:13:26,444 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-24 08:13:27,895 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-24 08:13:28,327 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-24 08:13:28,347 | WARNING | src.etl.loader | financial_ratios: dropped 24 rows with company_id not in companies (1160 remain)
+2026-07-24 08:13:28,353 | INFO | src.etl.loader | Logged 24 DQ-03 rejects for financial_ratios to validation_failures.csv
+2026-07-24 08:13:28,358 | WARNING | src.etl.loader | financial_ratios: dropped 119 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-24 08:13:28,503 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-24 08:13:28,528 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-24 08:13:28,539 | INFO | src.etl.loader | Merged market_cap into financial_ratios: 1041 rows
+2026-07-24 08:13:29,820 | INFO | __main__ | Removed existing db\nifty100.db for a clean load
+2026-07-24 08:13:29,991 | INFO | __main__ | Schema applied from db\schema.sql
+2026-07-24 08:13:30,007 | INFO | __main__ | Wrote companies: 92 rows (rejected: 0)
+2026-07-24 08:13:30,042 | INFO | __main__ | Wrote profitandloss: 1070 rows (rejected: 206)
+2026-07-24 08:13:30,077 | INFO | __main__ | Wrote balancesheet: 1058 rows (rejected: 254)
+2026-07-24 08:13:30,150 | INFO | __main__ | Wrote cashflow: 1056 rows (rejected: 131)
+2026-07-24 08:13:30,164 | INFO | __main__ | Wrote analysis: 16 rows (rejected: 4)
+2026-07-24 08:13:30,190 | INFO | __main__ | Wrote documents: 1457 rows (rejected: 128)
+2026-07-24 08:13:30,203 | INFO | __main__ | Wrote prosandcons: 14 rows (rejected: 2)
+2026-07-24 08:13:30,222 | INFO | __main__ | Wrote sectors: 92 rows (rejected: 0)
+2026-07-24 08:13:30,313 | INFO | __main__ | Wrote stock_prices: 5520 rows (rejected: 0)
+2026-07-24 08:13:30,346 | INFO | __main__ | Wrote financial_ratios: 1041 rows (rejected: 143)
+2026-07-24 08:13:30,354 | INFO | __main__ | Wrote peer_groups: 56 rows (rejected: 0)
+2026-07-24 08:14:39,708 | INFO | __main__ | Companies with no peer group assigned: 36 (ABB, ADANIENSOL, ADANIENT, ADANIPORTS, AMBUJACEM, APOLLOHOSP, ASIANPAINT, ATGL, BAJAJFINSV, BAJAJHLDNG, BEL, BHARTIARTL, BHEL, BOSCHLTD, COALINDIA, DLF, DMART, GRASIM, HAL, HAVELLS, ICICIGI, INDIGO, IRCTC, IRFC, JIOFIN, LODHA, LT, MOTHERSON, NAUKRI, PFC, PIDILITIND, RECLTD, SHREECEM, SIEMENS, TITAN, TRENT)
+2026-07-24 08:14:39,917 | INFO | __main__ | peer_percentiles table populated: 533 rows across 11 peer groups
+2026-07-24 08:37:32,137 | INFO | __main__ | Generated 91 radar charts in reports\radar_charts
+2026-07-24 08:37:33,189 | INFO | __main__ | Generated output\peer_comparison.xlsx with 11 sheets
+2026-07-24 08:48:56,327 | INFO | __main__ | Cleared output\validation_failures.csv for a fresh run
+2026-07-24 08:48:57,314 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-24 08:48:57,749 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-24 08:48:58,117 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-24 08:48:58,334 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-24 08:48:58,379 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-24 08:48:58,614 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-24 08:48:58,661 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-24 08:48:58,736 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-24 08:48:59,889 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-24 08:49:00,248 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-24 08:49:00,410 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-24 08:49:00,448 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-24 08:49:00,512 | INFO | src.etl.loader | Read companies: 92 rows, 12 cols
+2026-07-24 08:49:01,136 | INFO | src.etl.loader | Read profitandloss: 1276 rows, 15 cols
+2026-07-24 08:49:01,144 | WARNING | src.etl.loader | profitandloss: 103 rows rejected during year normalization
+2026-07-24 08:49:01,147 | INFO | src.etl.loader | Logged 103 DQ-07 rejects for profitandloss to validation_failures.csv
+2026-07-24 08:49:01,153 | WARNING | src.etl.loader | profitandloss: dropped 91 rows with company_id not in companies (1082 remain)
+2026-07-24 08:49:01,163 | INFO | src.etl.loader | Logged 91 DQ-03 rejects for profitandloss to validation_failures.csv
+2026-07-24 08:49:01,166 | WARNING | src.etl.loader | profitandloss: dropped 12 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-24 08:49:01,544 | INFO | src.etl.loader | Read balancesheet: 1312 rows, 13 cols
+2026-07-24 08:49:01,555 | WARNING | src.etl.loader | balancesheet: 5 rows rejected during year normalization
+2026-07-24 08:49:01,557 | INFO | src.etl.loader | Logged 5 DQ-07 rejects for balancesheet to validation_failures.csv
+2026-07-24 08:49:01,562 | WARNING | src.etl.loader | balancesheet: dropped 80 rows with company_id not in companies (1227 remain)
+2026-07-24 08:49:01,572 | INFO | src.etl.loader | Logged 80 DQ-03 rejects for balancesheet to validation_failures.csv
+2026-07-24 08:49:01,575 | WARNING | src.etl.loader | balancesheet: dropped 169 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-24 08:49:01,829 | INFO | src.etl.loader | Read cashflow: 1187 rows, 7 cols
+2026-07-24 08:49:01,849 | WARNING | src.etl.loader | cashflow: dropped 96 rows with company_id not in companies (1091 remain)
+2026-07-24 08:49:01,859 | INFO | src.etl.loader | Logged 96 DQ-03 rejects for cashflow to validation_failures.csv
+2026-07-24 08:49:01,864 | WARNING | src.etl.loader | cashflow: dropped 35 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-24 08:49:01,885 | INFO | src.etl.loader | Read analysis: 20 rows, 6 cols
+2026-07-24 08:49:01,890 | WARNING | src.etl.loader | analysis: dropped 4 rows with company_id not in companies (16 remain)
+2026-07-24 08:49:01,895 | INFO | src.etl.loader | Logged 4 DQ-03 rejects for analysis to validation_failures.csv
+2026-07-24 08:49:02,141 | INFO | src.etl.loader | Read documents: 1585 rows, 4 cols
+2026-07-24 08:49:02,156 | WARNING | src.etl.loader | documents: dropped 128 rows with company_id not in companies (1457 remain)
+2026-07-24 08:49:02,190 | INFO | src.etl.loader | Logged 128 DQ-03 rejects for documents to validation_failures.csv
+2026-07-24 08:49:02,228 | INFO | src.etl.loader | Read prosandcons: 16 rows, 4 cols
+2026-07-24 08:49:02,237 | WARNING | src.etl.loader | prosandcons: dropped 2 rows with company_id not in companies (14 remain)
+2026-07-24 08:49:02,241 | INFO | src.etl.loader | Logged 2 DQ-03 rejects for prosandcons to validation_failures.csv
+2026-07-24 08:49:02,315 | INFO | src.etl.loader | Read sectors: 92 rows, 6 cols
+2026-07-24 08:49:03,437 | INFO | src.etl.loader | Read stock_prices: 5520 rows, 9 cols
+2026-07-24 08:49:03,767 | INFO | src.etl.loader | Read financial_ratios: 1184 rows, 16 cols
+2026-07-24 08:49:03,786 | WARNING | src.etl.loader | financial_ratios: dropped 24 rows with company_id not in companies (1160 remain)
+2026-07-24 08:49:03,793 | INFO | src.etl.loader | Logged 24 DQ-03 rejects for financial_ratios to validation_failures.csv
+2026-07-24 08:49:03,798 | WARNING | src.etl.loader | financial_ratios: dropped 119 duplicate rows on ['company_id', 'year'] (kept first occurrence)
+2026-07-24 08:49:03,968 | INFO | src.etl.loader | Read market_cap: 552 rows, 9 cols
+2026-07-24 08:49:03,995 | INFO | src.etl.loader | Read peer_groups: 56 rows, 4 cols
+2026-07-24 08:49:04,007 | INFO | src.etl.loader | Merged market_cap into financial_ratios: 1041 rows
+2026-07-24 08:49:04,832 | INFO | __main__ | Removed existing db\nifty100.db for a clean load
+2026-07-24 08:49:04,981 | INFO | __main__ | Schema applied from db\schema.sql
+2026-07-24 08:49:04,995 | INFO | __main__ | Wrote companies: 92 rows (rejected: 0)
+2026-07-24 08:49:05,020 | INFO | __main__ | Wrote profitandloss: 1070 rows (rejected: 206)
+2026-07-24 08:49:05,045 | INFO | __main__ | Wrote balancesheet: 1058 rows (rejected: 254)
+2026-07-24 08:49:05,097 | INFO | __main__ | Wrote cashflow: 1056 rows (rejected: 131)
+2026-07-24 08:49:05,108 | INFO | __main__ | Wrote analysis: 16 rows (rejected: 4)
+2026-07-24 08:49:05,124 | INFO | __main__ | Wrote documents: 1457 rows (rejected: 128)
+2026-07-24 08:49:05,134 | INFO | __main__ | Wrote prosandcons: 14 rows (rejected: 2)
+2026-07-24 08:49:05,145 | INFO | __main__ | Wrote sectors: 92 rows (rejected: 0)
+2026-07-24 08:49:05,211 | INFO | __main__ | Wrote stock_prices: 5520 rows (rejected: 0)
+2026-07-24 08:49:05,236 | INFO | __main__ | Wrote financial_ratios: 1041 rows (rejected: 143)
+2026-07-24 08:49:05,245 | INFO | __main__ | Wrote peer_groups: 56 rows (rejected: 0)
+2026-07-24 08:49:27,586 | INFO | __main__ | Companies with no peer group assigned: 36 (ABB, ADANIENSOL, ADANIENT, ADANIPORTS, AMBUJACEM, APOLLOHOSP, ASIANPAINT, ATGL, BAJAJFINSV, BAJAJHLDNG, BEL, BHARTIARTL, BHEL, BOSCHLTD, COALINDIA, DLF, DMART, GRASIM, HAL, HAVELLS, ICICIGI, INDIGO, IRCTC, IRFC, JIOFIN, LODHA, LT, MOTHERSON, NAUKRI, PFC, PIDILITIND, RECLTD, SHREECEM, SIEMENS, TITAN, TRENT)
+2026-07-24 08:49:27,843 | INFO | __main__ | peer_percentiles table populated: 533 rows across 11 peer groups
+2026-07-24 08:50:24,226 | INFO | __main__ | Generated 91 radar charts in reports\radar_charts
+2026-07-24 08:50:25,019 | INFO | __main__ | Generated output\peer_comparison.xlsx with 11 sheets
+2026-07-24 08:50:32,162 | INFO | __main__ | Generated output\screener_output.xlsx

@@ -181,10 +181,15 @@ CREATE TABLE IF NOT EXISTS financial_ratios (
     return_on_capital_employed_pct REAL,
     return_on_assets_pct        REAL,
     revenue_cagr_5yr            REAL,
+    revenue_cagr_3yr            REAL,
     pat_cagr_5yr                REAL,
     eps_cagr_5yr                REAL,
-
-composite_quality_score         REAL,
+    composite_quality_score     REAL,
+    icr_label                   TEXT,
+    net_profit                  REAL,
+    sales                       REAL,
+    fcf_cagr_5yr                 REAL,
+    cfo_pat_ratio                 REAL,
     -- merged in from market_cap.xlsx:
     market_cap_crore             REAL,
     enterprise_value_crore       REAL,
@@ -195,7 +200,6 @@ composite_quality_score         REAL,
     UNIQUE (company_id, year),
     FOREIGN KEY (company_id) REFERENCES companies(id)
 );
-
 -- ---------------------------------------------------------------------
 -- 11. peer_groups  (from peer_groups.xlsx)
 -- ---------------------------------------------------------------------
@@ -205,6 +209,18 @@ CREATE TABLE IF NOT EXISTS peer_groups (
     company_id          TEXT NOT NULL,
     is_benchmark        INTEGER,               -- 0/1 (SQLite has no BOOLEAN)
     FOREIGN KEY (company_id) REFERENCES companies(id)
+);
+-- ---------------------------------------------------------------------
+-- 12. peer_percentiles (computed - Sprint 3 Day 18)
+-- ---------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS peer_percentiles (
+    id                  INTEGER PRIMARY KEY,
+    company_id          TEXT NOT NULL,
+    peer_group_name     TEXT NOT NULL,
+    metric              TEXT NOT NULL,
+    value               REAL,
+    percentile_rank     REAL,
+    year                TEXT NOT NULL
 );
 
 -- ---------------------------------------------------------------------
