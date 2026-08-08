@@ -1,4 +1,4 @@
-Ratio Edge Case Log - generated 2026-07-24T08:49:23
+Ratio Edge Case Log - generated 2026-08-08T11:34:14
 ================================================================================
 
 --- ROCE Cross-Check: latest year vs companies.roce_percentage (diff > 5%) ---
@@ -101,16 +101,16 @@ Total debt-free company-years (ICR substituted): 31
 sales_cagr_3yr_flag: 1 flagged rows
 sales_cagr_5yr_flag: 1 flagged rows
 sales_cagr_10yr_flag: 1 flagged rows
-pat_cagr_3yr_flag: 85 flagged rows
-pat_cagr_5yr_flag: 61 flagged rows
+pat_cagr_3yr_flag: 89 flagged rows
+pat_cagr_5yr_flag: 64 flagged rows
 pat_cagr_10yr_flag: 10 flagged rows
-eps_cagr_3yr_flag: 83 flagged rows
-eps_cagr_5yr_flag: 63 flagged rows
+eps_cagr_3yr_flag: 86 flagged rows
+eps_cagr_5yr_flag: 66 flagged rows
 eps_cagr_10yr_flag: 12 flagged rows
-fcf_cagr_3yr_flag: 361 flagged rows
-fcf_cagr_5yr_flag: 277 flagged rows
-fcf_cagr_10yr_flag: 84 flagged rows
-Total CAGR edge-case flags across all periods/metrics: 1039
+fcf_cagr_3yr_flag: 364 flagged rows
+fcf_cagr_5yr_flag: 279 flagged rows
+fcf_cagr_10yr_flag: 85 flagged rows
+Total CAGR edge-case flags across all periods/metrics: 1058
 
 --- High Leverage Flags (D/E > 5, non-Financials only) ---
 Total high-leverage flags: 18

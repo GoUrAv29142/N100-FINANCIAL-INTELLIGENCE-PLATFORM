@@ -10,7 +10,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-from src.analytics.cashflow_kpis import (
+from nifty100_dashboard.src.analytics.cashflow_kpis import (
     free_cash_flow,
     cfo_quality_score,
     capex_intensity,

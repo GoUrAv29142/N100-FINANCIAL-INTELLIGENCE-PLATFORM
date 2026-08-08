@@ -12,7 +12,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-from src.etl.normaliser import (
+from nifty100_dashboard.src.etl.normaliser import (
     normalize_year,
     normalize_ticker,
     YearNormalizationError,

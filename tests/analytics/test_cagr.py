@@ -11,7 +11,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-from src.analytics.cagr import calculate_cagr, revenue_cagr, pat_cagr, eps_cagr
+from nifty100_dashboard.src.analytics.cagr import calculate_cagr, revenue_cagr, pat_cagr, eps_cagr
 
 
 class TestCalculateCagr:

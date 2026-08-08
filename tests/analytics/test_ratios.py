@@ -10,7 +10,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-from src.analytics.ratios import (
+from nifty100_dashboard.src.analytics.ratios import (
     net_profit_margin,
     operating_profit_margin,
     return_on_equity,
